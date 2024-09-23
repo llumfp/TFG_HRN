@@ -1,0 +1,15 @@
+TEST 20/09/2024
+
+Executed eval_time_goal_gen.py on GPT-4o-mini
+    - testing 34 scenarios x 5 iterations
+    - 323 queries
+    - 206.152 input tokens
+    - 6.688 output tokens
+    - COST: 0.03$
+
+Executed eval_goal_gen.py on GPT-4o-mini
+    - testing 35 scenarios
+    - 72 queries
+    - 45.861 input tokens
+    - 1.775 output tokens
+    - COST: 0.01$

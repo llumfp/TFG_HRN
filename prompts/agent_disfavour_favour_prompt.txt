@@ -1,0 +1,83 @@
+A human and a robot are collaborating together to achieve some goals. The tasks are distributed between the agents.
+
+I have the following tasks:
+mop, used to clean, floor
+cloth, used to clean, floor
+knife, stored, table
+napkin, stored, table
+salmon, cooked, hob
+
+The agent is distracted.
+
+The agent should disfavour these tasks:
+salmon, cooked, hob
+knife, stored, table
+
+The agent should favour the tasks:
+None
+
+I have the following tasks:
+mop, used to clean, floor
+cloth, used to clean, floor
+knife, stored, table
+napkin, stored, table
+salmon, cooked, hob
+
+The agent has back problems.
+
+The agent should disfavour these tasks:
+mop, used to clean, floor
+cloth, used to clean, floor
+
+The agent should favour the tasks:
+None
+
+I have the following tasks:
+spoon, stored, drawer
+salmon, cooked, hob
+
+The agent loves to cook.
+
+The agent should disfavour these tasks:
+None
+
+The agent should favour the tasks:
+salmon, cooked, hob
+
+I have the following tasks:
+coffee cup, stored, tall cupboard
+fork, stored, drawer
+coke, placed, trash can
+
+The agent can't pick pointy objects.
+
+The agent should disfavour these tasks:
+fork, stored, drawer
+
+The agent should favour the tasks:
+None
+
+I have the following tasks:
+coffee cup, stored, tall cupboard
+mop, used to clean, floor
+salmon, cooked, hob
+
+The agent can't pick pointy objects.
+
+The agent should disfavour these tasks:
+None
+
+The agent should favour the tasks:
+None
+
+I have the following tasks:
+coke, placed, trash can
+mop, used to clean, floor
+
+The agent can't handle food.
+
+The agent should disfavour these tasks:
+None
+
+The agent should favour the tasks:
+None

@@ -1,0 +1,11 @@
+The goal is: I want to serve a quick snack. Would the following subgoal contribute to the goal? Answer yes or no.
+
+banana, served as snack, table
+
+Yes
+
+The goal is: I want to clean a kitchen. Would the following subgoal contribute to the goal? Answer yes or no.
+
+banana, served as snack, table
+
+No

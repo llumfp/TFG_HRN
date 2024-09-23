@@ -1,0 +1,25 @@
+Use common sense. For the following questions, answer yes or no.
+
+A broom is stored in the floor. Does it make sense?
+
+No
+
+A cereal is served as snack in the table. Does it make sense?
+
+Yes
+
+A coke is placed in the trash can. Does it make sense?
+
+Yes
+
+An apple is placed in the far counter. Does it make sense?
+
+Yes
+
+An apple is placed in the trash can. Does it make sense?
+
+Yes
+
+A drink is served in the close counter. Does it make sense?
+
+Yes

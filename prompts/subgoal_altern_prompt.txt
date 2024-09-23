@@ -1,0 +1,40 @@
+I want to cook a warm meal. 
+I have these available objects: salmon, chicken, mop.
+I have these available locations: hob, floor, table.
+I have the following goals:
+
+salmon, cooked, hob
+mop, used to clean, floor
+
+The salmon smells bad. Should any of these goals be modified? How?
+
+goal to be modified: salmon, cooked, hob
+new goal: chicken, cooked, hob
+
+I want to cook a warm meal and clean the floor.
+I have these available objects: salmon, chicken, vacuum, broom.
+I have these available locations: hob, floor, table.
+
+I have the following goals:
+
+salmon, cooked, hob
+vacuum, used to clean, floor
+
+The vacuum switch is not working. Should any of these goals be modified? How?
+
+goal to be modified: vacuum, used to clean, floor
+new goal: broom, used to clean, floor
+
+I want to cook a warm meal and clean the floor.
+I have these available objects: salmon, chicken, vacuum, broom.
+I have these available locations: hob, floor, table, microwave.
+
+I have the following goals:
+
+salmon, cooked, hob
+vacuum, used to clean, floor
+
+The hob is broken. Should any of these goals be modified? How?
+
+goal to be modified: salmon, cooked, hob
+new goal: salmon, cooked, microwave

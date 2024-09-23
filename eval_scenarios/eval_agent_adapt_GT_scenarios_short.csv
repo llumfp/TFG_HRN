@@ -1,0 +1,303 @@
+Agent Condition Type,Num,Condition,Scenario,Goal,Subgoals,GT subgoals to disfavour,GT subgoals to favour,Output: LLM subgoals to disfavour,Output: LLM subgoals to favour,Output: Plan,Metric 1: Subgoals to disfavour success,Metric 2: Subgoals to favour success,Metric 3: Plan success,Metric 4: Subgoals to disfavour not in plan,Metric 5: Subgoals to favour in plan,Average,Test Success
+1 - Robot negative,1.1,The robot can't pick pointy objects.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",none,none,,,,1,1,1,1,0,0.8,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",none,,,,,avge of both correctness and completeness,avge of both correctness and completeness,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",none,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer",,,,,,,,,,,
+,1.2,The robot can't get wet.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor","mop, used to clean, floor",,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","mop, used to clean, floor",,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",none,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","cleaning cloth, used to clean, fridge",,,,,,,,,,,
+,1.3,The robot has low dexterity. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor","mop, used to clean, floor",,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","mop, used to clean, floor",,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",none,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer",,,,,,,,,,,
+,1.4,The robot has a broken wrist.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,
+,1.5,The robot has no battery.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,
+,1.6,The robot can't open drawers.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,1.7,The robot can't get close to hazards.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+2 - Robot positives,2.1,The robot is good at cleaning surfaces.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.2,The robot is good at performing boring tasks.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.3,The robot is good at reaching high locations. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.4,The robot is fast at storing objects. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.5,The robot is good at performing repetitive tasks.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.6,The robot is good at performing boring tasks.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,2.7,The robot can't handle food.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+3 - Human negatives,3.1,The human can't lift their arm above their heads.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.2,The human can't bend.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.3,The human can't carry weight.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.4,The human doesn't like to clean.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.5,The human doesn't want to get dirty.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.6,The human has back pain.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,3.7,The human is distracted.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+4 - Human positives,4.1,The human is skilled at cooking. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.2,The human is good at picking small objects. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.3,The human is good at cleaning up.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.4,The human is good at complex tasks. ,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.5,The human is good at manipulating big objects.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.6,The human likes to cook.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,4.7,The human has a lot of energy.,1,I spilled my coke on the floor. I want to throw it away and bring something to help clean.,"coke, placed, trash can
+mop, used to clean, floor",,,,,,,,,,,,
+,,,2,I want to store the cup in the top shelf of the tall cupboard and clean the floor.,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,,,,,,,,,,
+,,,3,I want to place the heavy casserole on the table and cook some fish.,"casserole, placed, table
+salmon, cooked, hob",,,,,,,,,,,,
+,,,4,I want to tidy up all the small the cuttlery and clean the fridge.,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+7 - Multiple?,1,,,,,,,,,,,,,,,,
+,2,,,,,,,,,,,,,,,,
+,3,,,,,,,,,,,,,,,,
+,4,,,,,,,,,,,,,,,,
+,5,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,Types,conditions per type,scenarios tested per type ,,Total,,,,,,,,,,,,
+,6,5,4,,120,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,
+,,112,,,,,,,,,,,,,,,

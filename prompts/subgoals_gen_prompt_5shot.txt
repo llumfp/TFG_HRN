@@ -1,0 +1,59 @@
+You are a robot that will help me achieve a goal. For this, some subgoals need to be defined. 
+A subgoal is represented as: object, predicate, location. In each case, answer: which object should be matched to which location?
+
+Goal: I want to tidy up a kitchen.
+Predicates: stored, cooked, served, used to clean, placed
+Objects: tea, pepsi, chicken, grapefruit drink, coffee cup, mop, coke, water bottle, napkin, cleaning cloth, broom, salmon, cereal, knife, peanuts, lime soda, jalapeno chips, coke, apple, bowl, rice chips, redbull, 7up, energy bar, fork, sponge, casserole
+Locations: refrigerator, trash can, cabinet, tablewear cupboard, food cupboard, microwave, far counter, close counter, table, grill, utensil drawer, floor, hob, oven, sink, dish rack, table
+
+Subgoals:
+apple, stored, refrigerator
+mop, stored, cabinet
+spoon, stored, utensil drawer
+napkin, stored, bin
+cleaning cloth, stored, utensil drawer
+broom, stored, cabinet
+salmon, stored, refrigerator
+cereal, stored, food cupboard
+knife, stored, utensil drawer
+fork, stored, utensil drawer
+casserole, stored, cabinet
+
+Goal: I want to bring peanuts to the counter and a spoon to the table
+Predicates: stored, cooked, served, used to clean, placed
+Objects: tea, pepsi, chicken, grapefruit drink, coffee cup, mop, coke, water bottle, napkin, cleaning cloth, broom, salmon, cereal, knife, peanuts, lime soda, jalapeno chips, coke, apple, bowl, rice chips, redbull, 7up, energy bar, fork, sponge, casserole
+Locations: refrigerator, trash can, cabinet, tablewear cupboard, food cupboard, microwave, far counter, close counter, table, grill, utensil drawer, floor, hob, oven, sink, dish rack, table
+
+Subgoals:
+peanuts, served, close counter
+spoon, placed, table
+
+Goal: I spilled my coke on the table. I want to throw it away and bring something to help clean.
+Predicates: stored, cooked, served, used to clean, placed
+Objects: tea, pepsi, chicken, grapefruit drink, coffee cup, mop, coke, water bottle, napkin, cleaning cloth, broom, salmon, cereal, knife, peanuts, lime soda, jalapeno chips, coke, apple, bowl, rice chips, redbull, 7up, energy bar, fork, sponge, casserole
+Locations: refrigerator, trash can, cabinet, tablewear cupboard, food cupboard, microwave, far counter, close counter, table, grill, utensil drawer, floor, hob, oven, sink, dish rack, table
+
+Subgoals:
+coke, placed, trash can
+cleaning cloth, used to clean, table
+
+Goal: I just worked out. I am sitting at the table. I want two sodas and a snack to recover.
+Predicates: stored, cooked, served, used to clean, placed
+Objects: tea, pepsi, chicken, grapefruit drink, coffee cup, mop, coke, water bottle, napkin, cleaning cloth, broom, salmon, cereal, knife, peanuts, lime soda, jalapeno chips, coke, apple, bowl, rice chips, redbull, 7up, energy bar, fork, sponge, casserole
+Locations: refrigerator, trash can, cabinet, tablewear cupboard, food cupboard, microwave, far counter, close counter, table, grill, utensil drawer, floor, hob, oven, sink, dish rack, table
+
+Subgoals:
+cereal, served, table
+coke, served, table
+pepsi, served, table
+
+Goal: I want to clean the kitchen and prepare a meal.
+Predicates: stored, cooked, served, used to clean, placed
+Objects: tea, pepsi, chicken, grapefruit drink, coffee cup, mop, coke, water bottle, napkin, cleaning cloth, broom, salmon, cereal, knife, peanuts, lime soda, jalapeno chips, coke, apple, bowl, rice chips, redbull, 7up, energy bar, fork, sponge, casserole
+Locations: refrigerator, trash can, cabinet, tablewear cupboard, food cupboard, microwave, far counter, close counter, table, grill, utensil drawer, floor, hob, oven, sink, dish rack, table
+
+Subgoals:
+cleaning cloth, used to clean, table
+mop, used to clean, floor
+broom, used to clean, floor
+salmon, cooked, hob

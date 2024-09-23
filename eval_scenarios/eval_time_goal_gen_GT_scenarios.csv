@@ -1,0 +1,35 @@
+,Goal Type,Num,Goal,SayCan Instruction,GT subgoals
+1,1,1.1,I want to put the coke can down on the table.,Put the coke can down,"coke, placed, table"
+2,1,1.2,I want to place the coke can on the table.,Place the coke can on the table,"coke, placed, table"
+3,1,1.3,I want to let go of the coke can.,Let go of the coke can,"coke, placed, trash can"
+4,1,1.4,I want to release the coke can on the table.,Release the coke can,"coke, placed, table"
+5,2,2.1,A person is at the table. I want to bring them a lime drink.,How would you bring me lime drink?,"lime soda, placed, table"
+6,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,How would you bring me something to clean the kitchen with?,"[cleaning object], used to clean, [location]"
+28,2,2.24,I want to tidy up the fork.,NA,[multiple options]
+29,2,2.25,I want to tidy up the bowl.,NA,[multiple options]
+30,3,3.1,I want to throw away the apple.,How would you throw away the apple,"apple, placed, trash can"
+31,3,3.2,A person is at the table. I want to bring them a sponge.,How would you bring me a sponge?,"sponge, placed, table"
+32,3,3.3,A person is at the table. I want to bring them a coke.,How would you bring me a coke can?,"coke, placed, table"
+53,3,3.24,I want to prepare a snack.,NA,[multiple options]
+55,4,4.1,I want to pick up the apple and move it to the trash.,How would you pick up the apple and move it to the trash?,"apple, placed, trash can"
+56,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,How would you pick up the sponge and bring it to me?,"sponge, placed, table"
+68,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,How would you pick up the jalepeno chips and move it to the trash can?,"jalapeno chips, placed, trash can"
+69,4,4.15,I want to pick up the apple and move it to the trash can.,How would you pick up the apple and move it to the trash can?,"apple, placed, trash can"
+70,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,I opened a pepsi earlier. How would you bring me an open can?,"pepsi, placed, table"
+71,5,5.2,"I spilled my coke, I want to bring a replacement to the table.","I spilled my coke, can you bring me a replacement?","coke, placed, table"
+82,5,5.13,I want to move coke can to far counter.,Can you move coke can to far counter?,"coke, placed, far counter"
+83,5,5.14,I want to throw away the bag of chips.,Would you throw away the bag of chips for me?,"[chips], placed, trash can"
+84,6,6.1,I want to put an energy bar and a water bottle on the table.,How would you put an energy bar and water bottle on the table,"energy bar, placed, table
+lime soda, placed, table"
+85,6,6.2,I want to bring a lime soda and a bag of chips to the table.,How would you bring me a lime soda and a bag of chips,"[chips], placed, table
+lime soda, placed, table"
+97,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.","I just worked out, can you bring me a drink and a snack to recover?",[multiple options]
+98,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.","How would you bring me a fruit, a soda, and a bag of chips for lunch",[multiple options]
+99,7,7.1,I want to tidy up the bowl and cook a salmon.,NA,[multiple options]
+100,7,7.2,I want to clean the floor and serve the jalapeno chips.,NA,[multiple options]
+107,7,7.9,I want to store the heavy casserole and cook some fish.,NA,[multiple options]
+108,7,7.1,I want to serve a drink and wipe the counter.,NA,[multiple options]
+109,8,8.1,I want to tidy up the room.,NA,[multiple options]
+110,8,8.2,I want to clean the kitchen.,NA,[multiple options]
+112,8,8.4,I want to tidy up the room.,NA,[multiple options]
+113,8,8.5,I want to prepare a meal.,NA,[multiple options]

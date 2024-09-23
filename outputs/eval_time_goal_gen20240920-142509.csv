@@ -1,0 +1,161 @@
+,Goal Type,Goal number,INPUT - Goal,n_run,time (s)
+0,1,1.1,I want to put the coke can down on the table.,1,4.843899965286255
+0,1,1.1,I want to put the coke can down on the table.,2,3.608933210372925
+0,1,1.1,I want to put the coke can down on the table.,3,4.352254867553711
+0,1,1.1,I want to put the coke can down on the table.,4,4.188641786575317
+0,1,1.1,I want to put the coke can down on the table.,5,4.595394611358643
+0,1,1.2,I want to place the coke can on the table.,1,3.780275821685791
+0,1,1.2,I want to place the coke can on the table.,2,3.4687857627868652
+0,1,1.2,I want to place the coke can on the table.,3,4.274825096130371
+0,1,1.2,I want to place the coke can on the table.,4,4.704579591751099
+0,1,1.2,I want to place the coke can on the table.,5,4.499779224395752
+0,1,1.3,I want to let go of the coke can.,1,8.11587643623352
+0,1,1.3,I want to let go of the coke can.,2,4.061232328414917
+0,1,1.3,I want to let go of the coke can.,3,3.745908737182617
+0,1,1.3,I want to let go of the coke can.,4,6.55094838142395
+0,1,1.3,I want to let go of the coke can.,5,3.718305826187134
+0,1,1.4,I want to release the coke can on the table.,1,4.176820993423462
+0,1,1.4,I want to release the coke can on the table.,2,3.747177839279175
+0,1,1.4,I want to release the coke can on the table.,3,4.342776775360107
+0,1,1.4,I want to release the coke can on the table.,4,4.291127681732178
+0,1,1.4,I want to release the coke can on the table.,5,4.032275199890137
+0,2,2.1,A person is at the table. I want to bring them a lime drink.,1,4.882342576980591
+0,2,2.1,A person is at the table. I want to bring them a lime drink.,2,4.7956931591033936
+0,2,2.1,A person is at the table. I want to bring them a lime drink.,3,4.556745767593384
+0,2,2.1,A person is at the table. I want to bring them a lime drink.,4,7.224551439285278
+0,2,2.1,A person is at the table. I want to bring them a lime drink.,5,4.891074180603027
+0,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,1,2.0725386142730713
+0,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,2,1.7659881114959717
+0,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,3,1.868077039718628
+0,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,4,2.021148204803467
+0,2,2.2,A person is at the table. I want to bring something to clean the kitchen with.,5,1.7882330417633057
+0,2,2.24,I want to tidy up the fork.,1,3.722562313079834
+0,2,2.24,I want to tidy up the fork.,2,4.138095378875732
+0,2,2.24,I want to tidy up the fork.,3,3.7815968990325928
+0,2,2.24,I want to tidy up the fork.,4,5.4149956703186035
+0,2,2.24,I want to tidy up the fork.,5,7.174949884414673
+0,2,2.25,I want to tidy up the bowl.,1,3.2120156288146973
+0,2,2.25,I want to tidy up the bowl.,2,3.166161060333252
+0,2,2.25,I want to tidy up the bowl.,3,2.7033026218414307
+0,2,2.25,I want to tidy up the bowl.,4,3.013770341873169
+0,2,2.25,I want to tidy up the bowl.,5,2.8097996711730957
+0,3,3.1,I want to throw away the apple.,1,5.893649339675903
+0,3,3.1,I want to throw away the apple.,2,5.5065834522247314
+0,3,3.1,I want to throw away the apple.,3,5.511340856552124
+0,3,3.1,I want to throw away the apple.,4,5.56113862991333
+0,3,3.1,I want to throw away the apple.,5,4.99107551574707
+0,3,3.2,A person is at the table. I want to bring them a sponge.,1,3.3327255249023438
+0,3,3.2,A person is at the table. I want to bring them a sponge.,2,2.6596105098724365
+0,3,3.2,A person is at the table. I want to bring them a sponge.,3,2.659254312515259
+0,3,3.2,A person is at the table. I want to bring them a sponge.,4,3.108755588531494
+0,3,3.2,A person is at the table. I want to bring them a sponge.,5,3.143205165863037
+0,3,3.3,A person is at the table. I want to bring them a coke.,1,4.827827215194702
+0,3,3.3,A person is at the table. I want to bring them a coke.,2,7.304380893707275
+0,3,3.3,A person is at the table. I want to bring them a coke.,3,5.5632994174957275
+0,3,3.3,A person is at the table. I want to bring them a coke.,4,4.657269239425659
+0,3,3.3,A person is at the table. I want to bring them a coke.,5,4.7067952156066895
+0,3,3.24,I want to prepare a snack.,1,3.0481209754943848
+0,3,3.24,I want to prepare a snack.,2,2.6526682376861572
+0,3,3.24,I want to prepare a snack.,3,3.7481672763824463
+0,3,3.24,I want to prepare a snack.,4,2.2769665718078613
+0,3,3.24,I want to prepare a snack.,5,2.326737642288208
+0,4,4.1,I want to pick up the apple and move it to the trash.,1,4.556973934173584
+0,4,4.1,I want to pick up the apple and move it to the trash.,2,3.9317665100097656
+0,4,4.1,I want to pick up the apple and move it to the trash.,3,4.355979919433594
+0,4,4.1,I want to pick up the apple and move it to the trash.,4,4.326524972915649
+0,4,4.1,I want to pick up the apple and move it to the trash.,5,4.335479736328125
+0,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,1,3.8890326023101807
+0,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,2,4.030305624008179
+0,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,3,3.7107489109039307
+0,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,4,4.748554944992065
+0,4,4.2,A person is at the table. I want to pick up the sponge and bring it to them.,5,5.196892261505127
+0,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,1,4.444959878921509
+0,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,2,4.4623637199401855
+0,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,3,3.845522165298462
+0,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,4,6.179596185684204
+0,4,4.14,I want to pick up the jalapeno chips and move it to the trash can.,5,4.13569712638855
+0,4,4.15,I want to pick up the apple and move it to the trash can.,1,4.262923002243042
+0,4,4.15,I want to pick up the apple and move it to the trash can.,2,4.525942325592041
+0,4,4.15,I want to pick up the apple and move it to the trash can.,3,4.575047254562378
+0,4,4.15,I want to pick up the apple and move it to the trash can.,4,4.414553880691528
+0,4,4.15,I want to pick up the apple and move it to the trash can.,5,6.512003660202026
+0,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,1,4.6079325675964355
+0,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,2,4.357969760894775
+0,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,3,6.157538175582886
+0,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,4,3.9940185546875
+0,5,5.1,I opened a pepsi earlier. I want to bring the open can to the table.,5,3.964710235595703
+0,5,5.2,"I spilled my coke, I want to bring a replacement to the table.",1,6.324048757553101
+0,5,5.2,"I spilled my coke, I want to bring a replacement to the table.",2,4.620380401611328
+0,5,5.2,"I spilled my coke, I want to bring a replacement to the table.",3,3.9171197414398193
+0,5,5.2,"I spilled my coke, I want to bring a replacement to the table.",4,3.7446916103363037
+0,5,5.2,"I spilled my coke, I want to bring a replacement to the table.",5,5.021204948425293
+0,5,5.13,I want to move coke can to far counter.,1,4.276949167251587
+0,5,5.13,I want to move coke can to far counter.,2,4.851643085479736
+0,5,5.13,I want to move coke can to far counter.,3,4.614861965179443
+0,5,5.13,I want to move coke can to far counter.,4,6.847309827804565
+0,5,5.13,I want to move coke can to far counter.,5,8.860996007919312
+0,5,5.14,I want to throw away the bag of chips.,1,2.5105783939361572
+0,5,5.14,I want to throw away the bag of chips.,2,5.893475294113159
+0,5,5.14,I want to throw away the bag of chips.,3,2.659367799758911
+0,5,5.14,I want to throw away the bag of chips.,4,5.207643747329712
+0,5,5.14,I want to throw away the bag of chips.,5,5.905797004699707
+0,6,6.1,I want to put an energy bar and a water bottle on the table.,1,1.9503099918365479
+0,6,6.1,I want to put an energy bar and a water bottle on the table.,2,6.82838773727417
+0,6,6.1,I want to put an energy bar and a water bottle on the table.,3,1.533262014389038
+0,6,6.1,I want to put an energy bar and a water bottle on the table.,4,1.5356576442718506
+0,6,6.1,I want to put an energy bar and a water bottle on the table.,5,1.4253478050231934
+0,6,6.2,I want to bring a lime soda and a bag of chips to the table.,1,1.720202922821045
+0,6,6.2,I want to bring a lime soda and a bag of chips to the table.,2,1.7495946884155273
+0,6,6.2,I want to bring a lime soda and a bag of chips to the table.,3,1.6437335014343262
+0,6,6.2,I want to bring a lime soda and a bag of chips to the table.,4,1.4976439476013184
+0,6,6.2,I want to bring a lime soda and a bag of chips to the table.,5,1.3495235443115234
+0,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.",1,2.78936767578125
+0,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.",2,3.615090847015381
+0,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.",3,2.627958297729492
+0,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.",4,2.9560508728027344
+0,6,6.14,"I just worked out, I want to bring a drink and a snack to recover to the table.",5,2.6653318405151367
+0,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.",1,1.612138032913208
+0,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.",2,2.6794934272766113
+0,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.",3,2.553243398666382
+0,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.",4,2.632833242416382
+0,6,6.15,"I want to bring a fruit, a soda, and a bag of chips to the table for lunch.",5,2.801579475402832
+0,7,7.1,I want to tidy up the bowl and cook a salmon.,1,2.36789608001709
+0,7,7.1,I want to tidy up the bowl and cook a salmon.,2,3.2251296043395996
+0,7,7.1,I want to tidy up the bowl and cook a salmon.,3,2.4727981090545654
+0,7,7.1,I want to tidy up the bowl and cook a salmon.,4,3.7498114109039307
+0,7,7.1,I want to tidy up the bowl and cook a salmon.,5,2.4618523120880127
+0,7,7.2,I want to clean the floor and serve the jalapeno chips.,1,4.908721446990967
+0,7,7.2,I want to clean the floor and serve the jalapeno chips.,2,2.02648663520813
+0,7,7.2,I want to clean the floor and serve the jalapeno chips.,3,1.8082900047302246
+0,7,7.2,I want to clean the floor and serve the jalapeno chips.,4,2.1810531616210938
+0,7,7.2,I want to clean the floor and serve the jalapeno chips.,5,1.8316879272460938
+0,7,7.9,I want to store the heavy casserole and cook some fish.,1,2.358062744140625
+0,7,7.9,I want to store the heavy casserole and cook some fish.,2,2.454488754272461
+0,7,7.9,I want to store the heavy casserole and cook some fish.,3,2.1908020973205566
+0,7,7.9,I want to store the heavy casserole and cook some fish.,4,2.2490203380584717
+0,7,7.9,I want to store the heavy casserole and cook some fish.,5,2.091325044631958
+0,7,7.1,I want to serve a drink and wipe the counter.,1,2.8336565494537354
+0,7,7.1,I want to serve a drink and wipe the counter.,2,2.9906556606292725
+0,7,7.1,I want to serve a drink and wipe the counter.,3,4.197303771972656
+0,7,7.1,I want to serve a drink and wipe the counter.,4,3.2717905044555664
+0,7,7.1,I want to serve a drink and wipe the counter.,5,2.5210464000701904
+0,8,8.1,I want to tidy up the room.,1,7.714027166366577
+0,8,8.1,I want to tidy up the room.,2,5.256831407546997
+0,8,8.1,I want to tidy up the room.,3,6.339278221130371
+0,8,8.1,I want to tidy up the room.,4,5.161101579666138
+0,8,8.1,I want to tidy up the room.,5,5.330342531204224
+0,8,8.2,I want to clean the kitchen.,1,2.397014617919922
+0,8,8.2,I want to clean the kitchen.,2,2.3313052654266357
+0,8,8.2,I want to clean the kitchen.,3,2.5452451705932617
+0,8,8.2,I want to clean the kitchen.,4,2.376024007797241
+0,8,8.2,I want to clean the kitchen.,5,2.4360134601593018
+0,8,8.4,I want to tidy up the room.,1,5.044598817825317
+0,8,8.4,I want to tidy up the room.,2,7.00661039352417
+0,8,8.4,I want to tidy up the room.,3,7.053796291351318
+0,8,8.4,I want to tidy up the room.,4,8.694899559020996
+0,8,8.4,I want to tidy up the room.,5,10.279574632644653
+0,8,8.5,I want to prepare a meal.,1,3.5622470378875732
+0,8,8.5,I want to prepare a meal.,2,4.099376201629639
+0,8,8.5,I want to prepare a meal.,3,3.0626440048217773
+0,8,8.5,I want to prepare a meal.,4,5.193918228149414
+0,8,8.5,I want to prepare a meal.,5,3.0629723072052

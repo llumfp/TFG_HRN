@@ -1,0 +1,59 @@
+Two agents are collaborating together to achieve some goals. Each goal is assigned to one of the two agents.
+For each case, is there any goal that should be particularly avoided for one of the two agents?
+
+Example 1:
+I have the following goals:
+
+mop, used to clean, floor
+cloth, used to clean, floor
+knife, tidied up, table
+napkin, tidied up, table
+salmon, cooked, hob
+
+The agent is distracted. Which goals, if any, should not be assigned to this agent?
+
+salmon, cooked, hob
+knife, tidied up, table
+
+Example 2:
+I have the following goals:
+
+mop, used to clean, floor
+cloth, used to clean, floor
+knife, tidied up, table
+napkin, tidied up, table
+salmon, cooked, hob
+
+The agent has back problems. Which goals, if any, should not be assigned to this agent?
+
+mop, used to clean, floor
+cloth, used to clean, floor
+
+Example 3:
+I have the following goals:
+
+spoon, tidied up, drawer
+
+The agent loves to cook. Which goals, if any, should not be assigned to this agent?
+
+None
+
+Example 4:
+I have the following goals:
+
+fork, tidied up, drawer
+coke, placed, trash can
+
+The agent can't pick pointy objects. Which goals, if any, should not be assigned to this agent?
+
+fork, tidied up, drawer
+
+Example 5:
+I have the following goals:
+
+coke, placed, trash can
+mop, used to clean, floor
+
+The agent can't pick pointy objects. Which goals, if any, should not be assigned to this agent?
+
+None

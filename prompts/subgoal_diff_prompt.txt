@@ -1,0 +1,42 @@
+Goal: I want to cook a warm meal.
+I have the following subgoals:
+
+salmon, cooked, hob
+mop, used to clean, floor
+
+The chicken has been cooked in the hob. Can this action substitute any of the subgoals?
+
+subgoal: salmon, cooked, hob
+replaced by: chicken, cooked, hob
+
+Goal: I want to cook a warm meal and clean the floor.
+I have the following subgoals:
+
+salmon, cooked, hob
+vacuum, used to clean, floor
+
+The broom has been used to clean the floor. Can this action substitute any of the subgoals?
+
+subgoal: vacuum, used to clean, floor
+replaced by: broom, used to clean, floor
+
+I want to cook a warm meal and tidy up kitchen.
+I have the following subgoals:
+
+salmon, cooked, hob
+banana, stored, fruit basket
+
+The banana has been stored in the fridge. Can this action substitute any of the subgoals?
+
+subgoal: banana, stored, fruit basket
+replaced by: banana, stored, fridge
+
+I want to serve a snack.
+I have the following subgoals:
+
+banana, served, table
+
+The cereal have been served on the table. Can this action substitute any of the subgoals?
+
+subgoal: banana, served, table
+replaced by: cereal, served, table
