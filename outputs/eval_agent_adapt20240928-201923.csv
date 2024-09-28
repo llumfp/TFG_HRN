@@ -1,0 +1,58 @@
+,Test number,Condition number,INPUT - Condition,INPUT - scenario,INPUT - subgoals,GT subgoals to disfavour,GT subgoals to favour,OUTPUT - LLM subgoals to disfavour,subgoals disfavour correctness,subgoals disfavour completeness,OUTPUT - LLM subgoals to favour,subgoals favour correctness,subgoals favour completeness
+0,1,1.1,The robot can't pick pointy objects.,1,"coke, placed, trash can
+mop, used to clean, floor",none,none,[],,,[],,
+0,2,,The robot can't pick pointy objects.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",none,,[],,,"['coffee cup, stored, tall cupboard']",0.0,
+0,3,,The robot can't pick pointy objects.,3,"casserole, placed, table
+salmon, cooked, hob",none,,[],,,"['salmon, cooked, hob']",0.0,
+0,4,,The robot can't pick pointy objects.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1.0,1.0,"['cleaning cloth, used to clean, fridge']",0.0,
+0,5,1.2,The robot can't get wet.,1,"coke, placed, trash can
+mop, used to clean, floor","mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,1.0,"['coke, placed, trash can']",0.0,
+0,6,,The robot can't get wet.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,1.0,"['coffee cup, stored, tall cupboard']",0.0,
+0,7,,The robot can't get wet.,3,"casserole, placed, table
+salmon, cooked, hob",none,,"['casserole, placed, table']",0.0,,"['salmon, cooked, hob']",0.0,
+0,8,,The robot can't get wet.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","cleaning cloth, used to clean, fridge",,"['cleaning cloth, used to clean, fridge']",1.0,1.0,[],,
+0,9,1.3,The robot can't handle food.,1,"coke, placed, trash can
+mop, used to clean, floor","mop, used to clean, floor",,"['coke, placed, trash can']",0.0,0.0,"['mop, used to clean, floor']",0.0,
+0,10,,The robot can't handle food.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","mop, used to clean, floor",,[],,,[],,
+0,11,,The robot can't handle food.,3,"casserole, placed, table
+salmon, cooked, hob",none,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,,[],,
+0,12,,The robot can't handle food.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1.0,1.0,"['cleaning cloth, used to clean, fridge']",0.0,
+0,13,1.4,The robot has a broken wrist.,1,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,0.5,[],,
+0,14,,The robot has a broken wrist.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,0.5,"['coffee cup, stored, tall cupboard']",0.0,
+0,15,,The robot has a broken wrist.,3,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,"['salmon, cooked, hob']",1.0,0.5,"['casserole, placed, table']",0.0,
+0,16,,The robot has a broken wrist.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1.0,0.6666666666666666,"['cleaning cloth, used to clean, fridge']",0.0,
+0,17,1.5,The robot has low battery.,1,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,0.5,"['coke, placed, trash can']",0.0,
+0,18,,The robot has low battery.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,"['mop, used to clean, floor']",1.0,0.5,"['coffee cup, stored, tall cupboard']",0.0,
+0,19,,The robot has low battery.,3,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,"['salmon, cooked, hob']",1.0,0.5,"['casserole, placed, table']",0.0,
+0,20,,The robot has low battery.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1.0,0.6666666666666666,"['cleaning cloth, used to clean, fridge']",0.0,

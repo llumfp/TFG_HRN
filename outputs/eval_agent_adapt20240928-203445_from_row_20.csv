@@ -1,0 +1,213 @@
+,Test number,Condition number,INPUT - Condition,INPUT - scenario,INPUT - subgoals,GT subgoals to disfavour,GT subgoals to favour,OUTPUT - LLM subgoals to disfavour,subgoals disfavour correctness,subgoals disfavour completeness,OUTPUT - LLM subgoals to favour,subgoals favour correctness,subgoals favour completeness
+0,1,,The robot has low battery.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1.0,0.6666666666666666,"['cleaning cloth, used to clean, fridge']",0.0,
+0,2,1.6,The robot can't open drawers.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,3,,The robot can't open drawers.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard']",0.0,
+0,4,,The robot can't open drawers.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['salmon, cooked, hob']",0.0,
+0,5,,The robot can't open drawers.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,6,1.7,The robot can't get close to hazards.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['coke, placed, trash can']",0.0,,"['mop, used to clean, floor']",0.0,
+0,7,,The robot can't get close to hazards.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,8,,The robot can't get close to hazards.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",0.0,,"['casserole, placed, table']",0.0,
+0,9,,The robot can't get close to hazards.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,10,2.1,The robot is good at cleaning surfaces.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['mop, used to clean, floor']",0.0,
+0,11,,The robot is good at cleaning surfaces.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['mop, used to clean, floor']",0.0,
+0,12,,The robot is good at cleaning surfaces.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table']",0.0,
+0,13,,The robot is good at cleaning surfaces.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,14,2.2,The robot is good at performing boring tasks.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,15,,The robot is good at performing boring tasks.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['mop, used to clean, floor']",0.0,
+0,16,,The robot is good at performing boring tasks.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table']",0.0,
+0,17,,The robot is good at performing boring tasks.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,18,2.3,The robot is good at reaching high locations. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,[],,
+0,19,,The robot is good at reaching high locations. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard']",0.0,
+0,20,,The robot is good at reaching high locations. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['salmon, cooked, hob']",0.0,
+0,21,,The robot is good at reaching high locations. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",0.0,
+0,22,2.4,The robot is fast at storing objects. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,23,,The robot is fast at storing objects. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard', 'mop, used to clean, floor']",0.0,
+0,24,,The robot is fast at storing objects. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,25,,The robot is fast at storing objects. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",0.0,
+0,26,2.5,The robot is good at performing repetitive tasks.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,27,,The robot is good at performing repetitive tasks.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['mop, used to clean, floor']",0.0,
+0,28,,The robot is good at performing repetitive tasks.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,29,,The robot is good at performing repetitive tasks.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,30,2.6,The robot can reach the floor with ease.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,31,,The robot can reach the floor with ease.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard', 'mop, used to clean, floor']",0.0,
+0,32,,The robot can reach the floor with ease.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,33,,The robot can reach the floor with ease.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,34,2.7,The robot is specialised in cooking.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,[],,
+0,35,,The robot is specialised in cooking.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,36,,The robot is specialised in cooking.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['salmon, cooked, hob']",0.0,
+0,37,,The robot is specialised in cooking.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,38,3.1,The human can't lift their arm above their heads.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coke, placed, trash can']",0.0,
+0,39,,The human can't lift their arm above their heads.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['coffee cup, stored, tall cupboard']",0.0,,"['mop, used to clean, floor']",0.0,
+0,40,,The human can't lift their arm above their heads.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",0.0,,"['casserole, placed, table']",0.0,
+0,41,,The human can't lift their arm above their heads.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,42,3.2,The human can't bend.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coke, placed, trash can']",0.0,
+0,43,,The human can't bend.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,44,,The human can't bend.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,,[],,
+0,45,,The human can't bend.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",0.0,,[],,
+0,46,3.3,The human can't carry heavy weight.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coke, placed, trash can']",0.0,
+0,47,,The human can't carry heavy weight.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,48,,The human can't carry heavy weight.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table']",0.0,,"['salmon, cooked, hob']",0.0,
+0,49,,The human can't carry heavy weight.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,50,3.4,The human doesn't like to clean.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coke, placed, trash can']",0.0,
+0,51,,The human doesn't like to clean.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,52,,The human doesn't like to clean.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table']",0.0,,"['salmon, cooked, hob']",0.0,
+0,53,,The human doesn't like to clean.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",0.0,,[],,
+0,54,3.5,The human doesn't want to get dirty.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coke, placed, trash can']",0.0,
+0,55,,The human doesn't want to get dirty.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,56,,The human doesn't want to get dirty.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,,[],,
+0,57,,The human doesn't want to get dirty.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",0.0,,[],,
+0,58,3.6,The human has back pain.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,[],,
+0,59,,The human has back pain.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,60,,The human has back pain.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,,[],,
+0,61,,The human has back pain.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",0.0,,[],,
+0,62,3.7,The human is distracted.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,,[],,
+0,63,,The human is distracted.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,[],,
+0,64,,The human is distracted.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",0.0,,[],,
+0,65,,The human is distracted.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,66,4.1,The human is skilled at cooking. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can']",0.0,
+0,67,,The human is skilled at cooking. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,68,,The human is skilled at cooking. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['salmon, cooked, hob']",0.0,
+0,69,,The human is skilled at cooking. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,70,4.2,The human is good at picking small objects. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can']",0.0,
+0,71,,The human is good at picking small objects. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard']",0.0,
+0,72,,The human is good at picking small objects. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,73,,The human is good at picking small objects. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",0.0,
+0,74,4.3,The human is good at cleaning up.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['mop, used to clean, floor']",0.0,
+0,75,,The human is good at cleaning up.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard', 'mop, used to clean, floor']",0.0,
+0,76,,The human is good at cleaning up.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,77,,The human is good at cleaning up.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,78,4.4,The human is good at complex tasks. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,79,,The human is good at complex tasks. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,80,,The human is good at complex tasks. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,81,,The human is good at complex tasks. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,82,4.5,The human is good at manipulating big objects.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,83,,The human is good at manipulating big objects.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,84,,The human is good at manipulating big objects.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,85,,The human is good at manipulating big objects.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,86,4.6,The human likes to cook.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can']",0.0,
+0,87,,The human likes to cook.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0.0,,"['coffee cup, stored, tall cupboard']",0.0,
+0,88,,The human likes to cook.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['salmon, cooked, hob']",0.0,
+0,89,,The human likes to cook.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,
+0,90,4.7,The human has a lot of energy.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],,,"['coke, placed, trash can', 'mop, used to clean, floor']",0.0,
+0,91,,The human has a lot of energy.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],,,"['coffee cup, stored, tall cupboard', 'mop, used to clean, floor']",0.0,
+0,92,,The human has a lot of energy.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],,,"['casserole, placed, table', 'salmon, cooked, hob']",0.0,
+0,93,,The human has a lot of energy.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.0,,"['cleaning cloth, used to clean, fridge']",0.0,

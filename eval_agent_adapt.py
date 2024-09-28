@@ -58,7 +58,8 @@ class EvalAgentAdapt:
         return subgoal_dict
 
     def evaluate_test_cases(self):
-
+        begin = input('How many rows you already had?')
+        self.csv_output = self.csv_output[-4] + f"_from_row_{begin}.csv"
         header = pd.DataFrame([], columns=['Test number', 'Condition number', 'INPUT - Condition', 'INPUT - scenario', 'INPUT - subgoals',
                                            'GT subgoals to disfavour', 'GT subgoals to favour', 'OUTPUT - LLM subgoals to disfavour',
                                            'subgoals disfavour correctness', 'subgoals disfavour completeness',
@@ -66,7 +67,8 @@ class EvalAgentAdapt:
         header.to_csv(self.csv_output)
 
         # Obtener filas del CSV
-        df = pd.read_csv(self.csv_gt_scenarios)
+        df = pd.read_csv(self.csv_gt_scenarios,index_col=0)
+        df = df.loc[int(begin):]        
         n_tests = df.shape[0]
         test_start = 1
         test_end = n_tests
@@ -84,12 +86,12 @@ class EvalAgentAdapt:
             agent, subgoals_disfavour, subgoals_favour, pddl_costs = self.llm_agent_to_action.llm_pddl_action_costs_for_agent_condition(subgoals, condition)
 
             # Procesar subgoals GT
-            if isinstance(GT_disfavour, str) and (GT_disfavour.lower() == 'none' or GT_disfavour.strip() == ''):
+            if (isinstance(GT_disfavour, str) and (GT_disfavour.lower() == 'none' or GT_disfavour.strip() == '')) or (isinstance(GT_disfavour, float) or isinstance(GT_disfavour, int)):
                 GT_disfavour_list = []
             else:
                 GT_disfavour_list = GT_disfavour.strip().split('\n')
 
-            if isinstance(GT_favour, str) and (GT_favour.lower() == 'none' or GT_favour.strip() == ''):
+            if (isinstance(GT_favour, str) and (GT_favour.lower() == 'none' or GT_favour.strip() == '')) or (isinstance(GT_favour, float) or isinstance(GT_favour, int)):
                 GT_favour_list = []
             else:
                 GT_favour_list = GT_favour.strip().split('\n')

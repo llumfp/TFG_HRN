@@ -13,3 +13,27 @@ Executed eval_goal_gen.py on GPT-4o-mini
     - 45.861 input tokens
     - 1.775 output tokens
     - COST: 0.01$
+
+TEST 25/09/2024
+
+Executed eval_agent_adapt.py on GPT-4o-mini
+    - Failed because of non deterministic answers
+    - 17 queries
+    - 7.376 input tokens
+    - 1.026 output tokens
+    - COST: <0.01$
+
+TEST 28/09/2024
+Executed eval_agent_adapt.py on GPT-4o-mini
+    - 20 scenarios -> others failed because of non deterministic answers, but more answers where retrieved due to changes on code and adding some prompt
+    - 21 queries (1 from first failure)
+    - 9.875 input tokens
+    - 631 output tokens
+    - COST: <0.01$
+
+Executed eval_agent_adapt.py on GPT-4o-mini
+    - 93 scenarios -> the ones in the csv scenarios except the first 20
+    - 93 queries
+    - 43.866 input tokens
+    - 2.950 output tokens
+    - COST: <0.01$

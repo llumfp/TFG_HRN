@@ -1,3 +1,4 @@
+from pydantic import BaseModel
 import openai
 import re
 from tenacity import (
@@ -5,6 +6,18 @@ from tenacity import (
     stop_after_attempt,
     wait_random_exponential,
 )  # for exponential backoff
+
+# class Action:
+#     object: str
+#     verb: str
+#     location: str
+
+# class DisfavourFavour(BaseModel):
+#     favourable_robot: list[Action]
+#     favourable_human: list[Action]
+#     disfavourable_robot: list[Action]
+#     disfavourable_human: list[Action]
+#     explanation: str
 
 class LLMAgentToActionAllocationReasoner:
 
@@ -72,6 +85,7 @@ class LLMAgentToActionAllocationReasoner:
         # subgoals_disfavour = disfavour.group(1)
         # favour = re.search('favour the tasks:\n(.*)', llm_response)
         # subgoals_favour = favour.group(1)
+        print(llm_response)
         subgoals_disfavour = self.extract_disfavour_subgoals(llm_response)
         subgoals_favour = self.extract_favour_subgoals(llm_response)
 
@@ -159,9 +173,12 @@ class LLMAgentToActionAllocationReasoner:
     def action_cost_from_subgoal(self, subgoal, value, agent):
         subgoal_split = subgoal.split(", ")
         print(subgoal_split)
-        pddl_action_cost = {"attribute": subgoal_split[1] + "_cost", "agent": agent, "obj": subgoal_split[0], "loc": subgoal_split[2], "value": value}
-        print(pddl_action_cost)
-        return pddl_action_cost
+        if len(subgoal_split)>1:
+            pddl_action_cost = {"attribute": subgoal_split[1] + "_cost", "agent": agent, "obj": subgoal_split[0], "loc": subgoal_split[2], "value": value}
+            print(pddl_action_cost)
+            return pddl_action_cost
+        else:
+            return {}
 
     def get_predicate_from_subgoal(self, subgoal):
         subgoal_predicate = subgoal[subgoal.index(", ")+2:]
@@ -214,10 +231,12 @@ class LLMAgentToActionAllocationReasoner:
         # Función de reintento con backoff exponencial
         @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(100))
         def completion_with_backoff(**kwargs):
+            # return client.beta.chat.completions.parse(**kwargs)
             return client.chat.completions.create(**kwargs)
 
         # Definimos los mensajes en formato de chat
         messages = [
+            {"role": "system", "content": "You are a helpful assistant that will have to select if and agent has to favour or disfavour some tasks. Follow very strictly the format from the given examples."},
             {"role": "user", "content": prompt}
         ]
 
@@ -225,6 +244,7 @@ class LLMAgentToActionAllocationReasoner:
         response = completion_with_backoff(
             model="gpt-4o-mini",
             messages=messages,
+            # response_format=DisfavourFavour,
             temperature=0,
             max_tokens=256,
             top_p=1,

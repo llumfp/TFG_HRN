@@ -1,0 +1,1430 @@
+,Test number,Condition number,INPUT - Condition,INPUT - scenario,INPUT - subgoals,GT subgoals to disfavour,GT subgoals to favour,OUTPUT - LLM subgoals to disfavour,subgoals disfavour correctness,subgoals disfavour completeness,OUTPUT - LLM subgoals to favour,subgoals favour correctness,subgoals favour completeness,OUTPUT - Plan,plan success,subgoals to disfavour not in plan,subgoals to favour in plan,,,,,,,,,,,,
+0,1,1.1,The robot can't pick pointy objects.,1,"coke, placed, trash can
+mop, used to clean, floor",none,none,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,2,,The robot can't pick pointy objects.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",none,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,3,,The robot can't pick pointy objects.,3,"casserole, placed, table
+salmon, cooked, hob",none,,"['salmon, cooked, hob']",0,0,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,4,,The robot can't pick pointy objects.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1,1,[],1,1,"0.000: (move human init utensil_drawer)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (move human utensil_drawer table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick human knife table)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (move human table utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (store human knife utensil_drawer)  [10.000]
+50.005: (move human utensil_drawer table)  [10.000]
+60.006: (pick human fork table)  [10.000]
+70.007: (move human table utensil_drawer)  [10.000]
+80.008: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,5,1.2,The robot can't get wet.,1,"coke, placed, trash can
+mop, used to clean, floor","mop, used to clean, floor",,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,6,,The robot can't get wet.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","mop, used to clean, floor",,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coffee_cup counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter tall_cupboard)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+30.003: (store robot coffee_cup tall_cupboard)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,7,,The robot can't get wet.,3,"casserole, placed, table
+salmon, cooked, hob",none,,"['salmon, cooked, hob']",0,0,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,8,,The robot can't get wet.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","cleaning cloth, used to clean, fridge",,"['cleaning cloth, used to clean, fridge']",1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init table)  [10.000]
+10.001: (pick robot knife table)  [10.000]
+10.001: (pick human cleaning_cloth counter)  [10.000]
+20.002: (move human counter fridge)  [10.000]
+20.002: (move robot table utensil_drawer)  [10.000]
+30.003: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store human cleaning_cloth fridge)  [10.000]
+50.005: (move human fridge utensil_drawer)  [10.000]
+60.006: (move human utensil_drawer table)  [10.000]
+70.007: (pick human fork table)  [10.000]
+80.008: (move human table utensil_drawer)  [10.000]
+90.009: (store robot knife utensil_drawer)  [10.000]
+90.009: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,9,1.3,The robot can't handle food.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['coke, placed, trash can']",1,1,"['mop, used to clean, floor']",0,0,"0.000: (move human init trash_can)  [10.000]
+0.000: (move robot init floor)  [10.000]
+10.001: (move human trash_can counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (pick human coke counter)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (move human counter trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (place human coke trash_can)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,10,,The robot can't handle food.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,11,,The robot can't handle food.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,12,,The robot can't handle food.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0,0,[],1,1,"0.000: (move human init utensil_drawer)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (move human utensil_drawer table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick human knife table)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (move human table utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (store human knife utensil_drawer)  [10.000]
+50.005: (move human utensil_drawer table)  [10.000]
+60.006: (pick human fork table)  [10.000]
+70.007: (move human table utensil_drawer)  [10.000]
+80.008: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,13,1.4,The robot has a broken wrist.,1,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,"['mop, used to clean, floor']",1,0.5,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,14,,The robot has a broken wrist.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,"['mop, used to clean, floor']",1,0.5,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coffee_cup counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter tall_cupboard)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+30.003: (store robot coffee_cup tall_cupboard)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,15,,The robot has a broken wrist.,3,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,"['salmon, cooked, hob']",1,0.5,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,16,,The robot has a broken wrist.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1,0.67,[],1,1,"0.000: (move human init utensil_drawer)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (move human utensil_drawer table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick human knife table)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (move human table utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (store human knife utensil_drawer)  [10.000]
+50.005: (move human utensil_drawer table)  [10.000]
+60.006: (pick human fork table)  [10.000]
+70.007: (move human table utensil_drawer)  [10.000]
+80.008: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,17,1.5,The robot has low battery.,1,"coke, placed, trash can
+mop, used to clean, floor","coke, placed, trash can
+mop, used to clean, floor",,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,18,,The robot has low battery.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor","coffee cup, stored, tall cupboard
+mop, used to clean, floor",,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coffee_cup counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter tall_cupboard)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+30.003: (store robot coffee_cup tall_cupboard)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,19,,The robot has low battery.,3,"casserole, placed, table
+salmon, cooked, hob","casserole, placed, table
+salmon, cooked, hob",,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,20,,The robot has low battery.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge","knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,[],0,0,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,21,1.6,The robot can't open drawers.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,22,,The robot can't open drawers.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,23,,The robot can't open drawers.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init table)  [10.000]
+10.001: (move human table counter)  [10.000]
+10.001: (move robot table hob)  [10.000]
+20.002: (pick human salmon counter)  [10.000]
+20.002: (pick robot casserole hob)  [10.000]
+30.003: (move robot hob table)  [10.000]
+30.003: (move human counter hob)  [10.000]
+40.004: (place robot casserole table)  [10.000]
+40.004: (cook human salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,24,,The robot can't open drawers.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",1,1,[],1,1,"0.000: (move human init utensil_drawer)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (move human utensil_drawer table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick human knife table)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (move human table utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (store human knife utensil_drawer)  [10.000]
+50.005: (move human utensil_drawer table)  [10.000]
+60.006: (pick human fork table)  [10.000]
+70.007: (move human table utensil_drawer)  [10.000]
+80.008: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,25,1.7,The robot can't get close to hazards.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0,0,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,26,,The robot can't get close to hazards.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0,0,[],1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coffee_cup counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter tall_cupboard)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+30.003: (store robot coffee_cup tall_cupboard)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,27,,The robot can't get close to hazards.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,28,,The robot can't get close to hazards.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.5,1,[],1,1,"0.000: (move human init utensil_drawer)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (move human utensil_drawer table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick human knife table)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (move human table utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (store human knife utensil_drawer)  [10.000]
+50.005: (move human utensil_drawer table)  [10.000]
+60.006: (pick human fork table)  [10.000]
+70.007: (move human table utensil_drawer)  [10.000]
+80.008: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,29,2.1,The robot is good at cleaning surfaces.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,30,,The robot is good at cleaning surfaces.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,31,,The robot is good at cleaning surfaces.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['casserole, placed, table']",0,0,"0.000: (move robot init counter)  [10.000]
+0.000: (move human init hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+20.002: (move human hob table)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,32,,The robot is good at cleaning surfaces.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['cleaning cloth, used to clean, fridge']",1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,33,2.2,The robot is good at performing boring tasks.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,34,,The robot is good at performing boring tasks.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,35,,The robot is good at performing boring tasks.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['casserole, placed, table']",1,1,"0.000: (move robot init counter)  [10.000]
+0.000: (move human init hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+20.002: (move human hob table)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,36,,The robot is good at performing boring tasks.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['cleaning cloth, used to clean, fridge']",1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,37,2.3,The robot is good at reaching high locations. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['coke, placed, trash can']",0,0,"0.000: (move robot init trash_can)  [10.000]
+0.000: (move human init floor)  [10.000]
+10.001: (move robot trash_can counter)  [10.000]
+10.001: (move human floor cabinet)  [10.000]
+20.002: (pick robot coke counter)  [10.000]
+20.002: (pick human mop cabinet)  [10.000]
+30.003: (move robot counter trash_can)  [10.000]
+30.003: (move human cabinet floor)  [10.000]
+40.004: (place robot coke trash_can)  [10.000]
+40.004: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,38,,The robot is good at reaching high locations. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['coffee cup, stored, tall cupboard']",1,1,"0.000: (move robot init tall_cupboard)  [10.000]
+0.000: (move human init floor)  [10.000]
+10.001: (move robot tall_cupboard counter)  [10.000]
+10.001: (move human floor cabinet)  [10.000]
+20.002: (pick robot coffee_cup counter)  [10.000]
+20.002: (pick human mop cabinet)  [10.000]
+30.003: (move robot counter tall_cupboard)  [10.000]
+30.003: (move human cabinet floor)  [10.000]
+40.004: (store robot coffee_cup tall_cupboard)  [10.000]
+40.004: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,39,,The robot is good at reaching high locations. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,40,,The robot is good at reaching high locations. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['cleaning cloth, used to clean, fridge']",1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,41,2.4,The robot is fast at storing objects. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['coke, placed, trash can']",1,1,"0.000: (move robot init trash_can)  [10.000]
+0.000: (move human init floor)  [10.000]
+10.001: (move robot trash_can counter)  [10.000]
+10.001: (move human floor cabinet)  [10.000]
+20.002: (pick robot coke counter)  [10.000]
+20.002: (pick human mop cabinet)  [10.000]
+30.003: (move robot counter trash_can)  [10.000]
+30.003: (move human cabinet floor)  [10.000]
+40.004: (place robot coke trash_can)  [10.000]
+40.004: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,42,,The robot is fast at storing objects. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['coffee cup, stored, tall cupboard']",1,1,"0.000: (move robot init tall_cupboard)  [10.000]
+0.000: (move human init floor)  [10.000]
+10.001: (move robot tall_cupboard counter)  [10.000]
+10.001: (move human floor cabinet)  [10.000]
+20.002: (pick robot coffee_cup counter)  [10.000]
+20.002: (pick human mop cabinet)  [10.000]
+30.003: (move robot counter tall_cupboard)  [10.000]
+30.003: (move human cabinet floor)  [10.000]
+40.004: (store robot coffee_cup tall_cupboard)  [10.000]
+40.004: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,43,,The robot is fast at storing objects. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['casserole, placed, table']",1,1,"0.000: (move robot init counter)  [10.000]
+0.000: (move human init hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+20.002: (move human hob table)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,44,,The robot is fast at storing objects. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,45,2.5,The robot is good at performing repetitive tasks.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,46,,The robot is good at performing repetitive tasks.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,47,,The robot is good at performing repetitive tasks.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,48,,The robot is good at performing repetitive tasks.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer', 'cleaning cloth, used to clean, fridge']",1,0.66,"0.000: (move robot init utensil_drawer)  [10.000]
+0.000: (move human init fridge)  [10.000]
+10.001: (move robot utensil_drawer table)  [10.000]
+10.001: (move human fridge counter)  [10.000]
+20.002: (pick robot knife table)  [10.000]
+20.002: (pick human cleaning_cloth counter)  [10.000]
+30.003: (move human counter fridge)  [10.000]
+30.003: (move robot table utensil_drawer)  [10.000]
+40.004: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store robot knife utensil_drawer)  [10.000]
+50.005: (move robot utensil_drawer table)  [10.000]
+60.006: (pick robot fork table)  [10.000]
+70.007: (move robot table utensil_drawer)  [10.000]
+80.008: (store robot fork utensil_drawer)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,49,2.6,The robot can reach the floor with ease.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,50,,The robot can reach the floor with ease.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,51,,The robot can reach the floor with ease.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init table)  [10.000]
+10.001: (move human table counter)  [10.000]
+10.001: (move robot table hob)  [10.000]
+20.002: (pick human salmon counter)  [10.000]
+20.002: (pick robot casserole hob)  [10.000]
+30.003: (move robot hob table)  [10.000]
+30.003: (move human counter hob)  [10.000]
+40.004: (place robot casserole table)  [10.000]
+40.004: (cook human salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,52,,The robot can reach the floor with ease.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['cleaning cloth, used to clean, fridge']",0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,53,2.7,The robot is specialised in cooking.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,54,,The robot is specialised in cooking.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,55,,The robot is specialised in cooking.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,56,,The robot is specialised in cooking.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",0,0,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0,0,"0.000: (move robot init utensil_drawer)  [10.000]
+0.000: (move human init fridge)  [10.000]
+10.001: (move robot utensil_drawer table)  [10.000]
+10.001: (move human fridge counter)  [10.000]
+20.002: (pick robot knife table)  [10.000]
+20.002: (pick human cleaning_cloth counter)  [10.000]
+30.003: (move human counter fridge)  [10.000]
+30.003: (move robot table utensil_drawer)  [10.000]
+40.004: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store robot knife utensil_drawer)  [10.000]
+50.005: (move robot utensil_drawer table)  [10.000]
+60.006: (pick robot fork table)  [10.000]
+70.007: (move robot table utensil_drawer)  [10.000]
+80.008: (store robot fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,57,3.1,The human can't lift their arm above their heads.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0,0,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,58,,The human can't lift their arm above their heads.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['coffee cup, stored, tall cupboard']",1,1,"['mop, used to clean, floor']",0,0,"0.000: (move robot init tall_cupboard)  [10.000]
+0.000: (move human init floor)  [10.000]
+10.001: (move robot tall_cupboard counter)  [10.000]
+10.001: (move human floor cabinet)  [10.000]
+20.002: (pick robot coffee_cup counter)  [10.000]
+20.002: (pick human mop cabinet)  [10.000]
+30.003: (move robot counter tall_cupboard)  [10.000]
+30.003: (move human cabinet floor)  [10.000]
+40.004: (store robot coffee_cup tall_cupboard)  [10.000]
+40.004: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,59,,The human can't lift their arm above their heads.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,60,,The human can't lift their arm above their heads.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],0,0,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,61,3.2,The human can't bend.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,62,,The human can't bend.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,63,,The human can't bend.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",0,0,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,64,,The human can't bend.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,65,3.3,The human can't carry heavy weight.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0,0,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,66,,The human can't carry heavy weight.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,67,,The human can't carry heavy weight.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table']",1,1,[],1,1,"0.000: (move robot init counter)  [10.000]
+0.000: (move human init hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+20.002: (move human hob table)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,68,,The human can't carry heavy weight.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,69,3.4,The human doesn't like to clean.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,70,,The human doesn't like to clean.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,71,,The human doesn't like to clean.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init table)  [10.000]
+10.001: (move human table counter)  [10.000]
+10.001: (move robot table hob)  [10.000]
+20.002: (pick human salmon counter)  [10.000]
+20.002: (pick robot casserole hob)  [10.000]
+30.003: (move robot hob table)  [10.000]
+30.003: (move human counter hob)  [10.000]
+40.004: (place robot casserole table)  [10.000]
+40.004: (cook human salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,72,,The human doesn't like to clean.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,73,3.5,The human doesn't want to get dirty.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,0.5,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,74,,The human doesn't want to get dirty.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,75,,The human doesn't want to get dirty.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,76,,The human doesn't want to get dirty.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['cleaning cloth, used to clean, fridge']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,77,3.6,The human has back pain.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,1,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,78,,The human has back pain.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,"['mop, used to clean, floor']",1,0.5,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,79,,The human has back pain.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['casserole, placed, table']",1,1,[],1,1,"0.000: (move robot init counter)  [10.000]
+0.000: (move human init hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+20.002: (move human hob table)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,0,1,,,,,,,,,,,,
+0,80,,The human has back pain.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0,0,[],1,1,"0.000: (move robot init utensil_drawer)  [10.000]
+0.000: (move human init fridge)  [10.000]
+10.001: (move robot utensil_drawer table)  [10.000]
+10.001: (move human fridge counter)  [10.000]
+20.002: (pick robot knife table)  [10.000]
+20.002: (pick human cleaning_cloth counter)  [10.000]
+30.003: (move human counter fridge)  [10.000]
+30.003: (move robot table utensil_drawer)  [10.000]
+40.004: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store robot knife utensil_drawer)  [10.000]
+50.005: (move robot utensil_drawer table)  [10.000]
+60.006: (pick robot fork table)  [10.000]
+70.007: (move robot table utensil_drawer)  [10.000]
+80.008: (store robot fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,81,3.7,The human is distracted.,1,"coke, placed, trash can
+mop, used to clean, floor",,,"['mop, used to clean, floor']",0,0,[],1,1,"0.000: (move robot init floor)  [10.000]
+0.000: (move human init counter)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,82,,The human is distracted.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,83,,The human is distracted.,3,"casserole, placed, table
+salmon, cooked, hob",,,"['salmon, cooked, hob']",1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (move robot hob counter)  [10.000]
+10.001: (move human table hob)  [10.000]
+20.002: (pick robot salmon counter)  [10.000]
+20.002: (pick human casserole hob)  [10.000]
+30.003: (move human hob table)  [10.000]
+30.003: (move robot counter hob)  [10.000]
+40.004: (place human casserole table)  [10.000]
+40.004: (cook robot salmon hob)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,84,,The human is distracted.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,"['knife, stored, utensil drawer', 'fork, stored, utensil drawer']",0.5,1,[],1,1,"0.000: (move robot init utensil_drawer)  [10.000]
+0.000: (move human init fridge)  [10.000]
+10.001: (move robot utensil_drawer table)  [10.000]
+10.001: (move human fridge counter)  [10.000]
+20.002: (pick robot knife table)  [10.000]
+20.002: (pick human cleaning_cloth counter)  [10.000]
+30.003: (move human counter fridge)  [10.000]
+30.003: (move robot table utensil_drawer)  [10.000]
+40.004: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store robot knife utensil_drawer)  [10.000]
+50.005: (move robot utensil_drawer table)  [10.000]
+60.006: (pick robot fork table)  [10.000]
+70.007: (move robot table utensil_drawer)  [10.000]
+80.008: (store robot fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,85,4.1,The human is skilled at cooking. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,86,,The human is skilled at cooking. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,87,,The human is skilled at cooking. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,88,,The human is skilled at cooking. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,89,4.2,The human is good at picking small objects. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['coke, placed, trash can']",1,1,"0.000: (move human init trash_can)  [10.000]
+0.000: (move robot init floor)  [10.000]
+10.001: (move human trash_can counter)  [10.000]
+10.001: (move robot floor cabinet)  [10.000]
+20.002: (pick human coke counter)  [10.000]
+20.002: (pick robot mop cabinet)  [10.000]
+30.003: (move human counter trash_can)  [10.000]
+30.003: (move robot cabinet floor)  [10.000]
+40.004: (place human coke trash_can)  [10.000]
+40.004: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,90,,The human is good at picking small objects. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],0,0,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,91,,The human is good at picking small objects. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",0,0,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,92,,The human is good at picking small objects. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,93,4.3,The human is good at cleaning up.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,94,,The human is good at cleaning up.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coffee_cup counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter tall_cupboard)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+30.003: (store robot coffee_cup tall_cupboard)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,95,,The human is good at cleaning up.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['casserole, placed, table']",1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (pick human salmon counter)  [10.000]
+10.001: (pick robot casserole hob)  [10.000]
+20.002: (move human counter hob)  [10.000]
+20.002: (move robot hob table)  [10.000]
+30.003: (place robot casserole table)  [10.000]
+30.003: (cook human salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,96,,The human is good at cleaning up.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,"['cleaning cloth, used to clean, fridge']",1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init table)  [10.000]
+10.001: (pick robot knife table)  [10.000]
+10.001: (pick human cleaning_cloth counter)  [10.000]
+20.002: (move human counter fridge)  [10.000]
+20.002: (move robot table utensil_drawer)  [10.000]
+30.003: (clean human cleaning_cloth fridge)  [10.000]
+40.004: (store human cleaning_cloth fridge)  [10.000]
+50.005: (move human fridge utensil_drawer)  [10.000]
+60.006: (move human utensil_drawer table)  [10.000]
+70.007: (pick human fork table)  [10.000]
+80.008: (move human table utensil_drawer)  [10.000]
+90.009: (store robot knife utensil_drawer)  [10.000]
+90.009: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,97,4.4,The human is good at complex tasks. ,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",0,0,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,98,,The human is good at complex tasks. ,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,99,,The human is good at complex tasks. ,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,,1,0,0,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (pick human salmon counter)  [10.000]
+10.001: (pick robot casserole hob)  [10.000]
+20.002: (move human counter hob)  [10.000]
+20.002: (move robot hob table)  [10.000]
+30.003: (place robot casserole table)  [10.000]
+30.003: (cook human salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,100,,The human is good at complex tasks. ,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,101,4.5,The human is good at manipulating big objects.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,"['mop, used to clean, floor']",1,1,"0.000: (move human init cabinet)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick robot coke counter)  [10.000]
+10.001: (pick human mop cabinet)  [10.000]
+20.002: (move robot counter trash_can)  [10.000]
+20.002: (move human cabinet floor)  [10.000]
+30.003: (place robot coke trash_can)  [10.000]
+30.003: (clean human mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,102,,The human is good at manipulating big objects.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],0,0,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,103,,The human is good at manipulating big objects.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['casserole, placed, table']",1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init hob)  [10.000]
+10.001: (pick human salmon counter)  [10.000]
+10.001: (pick robot casserole hob)  [10.000]
+20.002: (move human counter hob)  [10.000]
+20.002: (move robot hob table)  [10.000]
+30.003: (place robot casserole table)  [10.000]
+30.003: (cook human salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,104,,The human is good at manipulating big objects.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,105,4.6,The human likes to cook.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,106,,The human likes to cook.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],1,1,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,107,,The human likes to cook.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,108,,The human likes to cook.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],1,1,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,109,4.7,The human has a lot of energy.,1,"coke, placed, trash can
+mop, used to clean, floor",,,[],1,1,[],0,0,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coke counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter trash_can)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (place human coke trash_can)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,110,,The human has a lot of energy.,2,"coffee cup, stored, tall cupboard
+mop, used to clean, floor",,,[],1,1,[],0,0,"0.000: (move human init counter)  [10.000]
+0.000: (move robot init cabinet)  [10.000]
+10.001: (pick human coffee_cup counter)  [10.000]
+10.001: (pick robot mop cabinet)  [10.000]
+20.002: (move human counter tall_cupboard)  [10.000]
+20.002: (move robot cabinet floor)  [10.000]
+30.003: (store human coffee_cup tall_cupboard)  [10.000]
+30.003: (clean robot mop floor)  [10.000]
+",1,1,1,,,,,,,,,,,,
+0,111,,The human has a lot of energy.,3,"casserole, placed, table
+salmon, cooked, hob",,,[],1,1,"['salmon, cooked, hob']",1,1,"0.000: (move human init hob)  [10.000]
+0.000: (move robot init counter)  [10.000]
+10.001: (pick human casserole hob)  [10.000]
+10.001: (pick robot salmon counter)  [10.000]
+20.002: (move human hob table)  [10.000]
+20.002: (move robot counter hob)  [10.000]
+30.003: (place human casserole table)  [10.000]
+30.003: (cook robot salmon hob)  [10.000]
+",1,1,0,,,,,,,,,,,,
+0,112,,The human has a lot of energy.,4,"knife, stored, utensil drawer
+fork, stored, utensil drawer
+cleaning cloth, used to clean, fridge",,,[],1,1,[],0,0,"0.000: (move human init table)  [10.000]
+0.000: (move robot init fridge)  [10.000]
+10.001: (pick human knife table)  [10.000]
+10.001: (move robot fridge counter)  [10.000]
+20.002: (pick robot cleaning_cloth counter)  [10.000]
+20.002: (move human table utensil_drawer)  [10.000]
+30.003: (move robot counter fridge)  [10.000]
+30.003: (store human knife utensil_drawer)  [10.000]
+40.004: (clean robot cleaning_cloth fridge)  [10.000]
+40.004: (move human utensil_drawer table)  [10.000]
+50.005: (move robot fridge utensil_drawer)  [10.000]
+50.005: (pick human fork table)  [10.000]
+60.006: (move human table utensil_drawer)  [10.000]
+70.007: (store human fork utensil_drawer)  [10.000]
+",1,1,1,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,N,M,R,K,J,Q,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,1,0.928571428571429,0.901785714285714,,,,,Subgoals to favour,,,Subgoals to disfavour ,,,,"For metric evaluation, none counts as a subgoal"
+,,,,,,,,,0.875,0.857387387387387,,0.839285714285714,0.83625,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,Agent Condition Type,,Plan success,Completeness,Correctness,Correct allocation in plan,Completeness,Correctness,Correct allocation in plan,,
+,,,,,,,,,,,,,,,,,,30-57,Positive,Robot ,100%,74%,75%,86%,96%,96%,100%,,
+,,,,,,,,,,,,,,,,,,86-113,,Human ,100%,71%,71%,79%,100%,98%,100%,,
+,,,,,,,,,,,,,,,,,,2-29,Negative,Robot ,100%,96%,96%,100%,72%,77%,79%,,
+,,,,,,,,,,,,,,,,,,58-85,,Human,100%,96%,96%,100%,75%,77%,93%,,
+,,,,,,,,,,,,,,,,,,,,Total,100%,84%,84%,90%,86%,88%,93%,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Human vs Robot: Similar results for robot and human conditions.,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Positive vs Negative:,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Subgoals,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"Average positive and negative, finds right subgoals to favour in over 84% of cases, and subgoals to disfavour in over 86% of cases.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Positive conditions involve subgoals to favour and none to disfavour. ,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For positive conditions, finds right subgoals to favour in over 71% cases. Finds that no subgoals should be favoured in over 96% cases.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Negative conditions involve subgoals to disfavour and none to favour. ,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For negative conditions, finds right subgoals to disfavour in over 72% cases. Finds that no subgoals should be disfavoured in over 96% cases.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,Correct allocation in plan? planner’s fault,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For negative and subgoals to favour, no changes need to be made in plan so 100%.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For negative and subgoals to disfavour, correct allocation (subgoals not assigned to the involved agent) in 86% for robot and 79% for human.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For positive and subgoals to favour, correct allocation (subgoals assigned to the involved agent) in 79% for robot and 93% for human. No reason for this difference.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,"For positive and subgoals to disfavour, correct allocation (subgoals not assigned to the involved agent) in 75% for robot and 71% for human.",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,Agent Condition Type,,Subgoals to favour,,Subgoals to disfavour ,,Plan success,,
+,,,,,,,,,,,,,,,,,,,,,,,Completeness,Correctness,Completeness,Correctness,,,
+,,,,,,,,,,,,,,,,,,,,,Positive,Robot ,74%,75%,96%,96%,100%,,
+,,,,,,,,,,,,,,,,,,,,,,Human ,71%,71%,100%,98%,100%,,
+,,,,,,,,,,,,,,,,,,,,,Negative,Robot ,96%,96%,72%,77%,100%,,
+,,,,,,,,,,,,,,,,,,,,,,Human,96%,96%,75%,77%,100%,,
+,,,,,,,,,,,,,,,,,,,,,,Total,84%,84%,86%,88%,100%,,
