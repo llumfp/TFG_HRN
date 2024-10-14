@@ -37,3 +37,11 @@ Executed eval_agent_adapt.py on GPT-4o-mini
     - 43.866 input tokens
     - 2.950 output tokens
     - COST: <0.01$
+
+TEST 11/10/2024
+Executing tests in the new domain
+    - Testing with new domain
+    - X queries
+    - X input tokens
+    - X output tokens
+    - COST: $

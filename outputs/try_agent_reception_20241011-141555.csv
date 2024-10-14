@@ -1,0 +1,28 @@
+num_condition,type,goals,GT_subgoals_disfavour,GT_subgoals_favour,agent,subgoals_disfavour,subgoals_favour
+1,1 - Robot negative,"['1','3','5']",none,none,robot,[],"[""['letter placed envelope', 'stamp put envelope', 'package picked_up loc2_entradaFME', 'records placed box', 'box brought warehouse']""]"
+2,1 - Robot negative,"['1','3','5']",none,none,robot,"['cart picked_up loc3', 'package picked_up loc2_entradaFME', 'cart leaved loc3']","['letter placed envelope', 'stamp put envelope', 'records placed box', 'box brought warehouse']"
+3,1 - Robot negative,"['1','3','5']",none,none,robot,['package picked_up loc2_entradaFME'],[]
+4,1 - Robot negative,"['1','3','5']",none,none,human,"['letter placed envelope', 'stamp put envelope']","['cart picked_up loc3', 'package picked_up loc2_entradaFME', 'cart leaved loc3', 'records placed box', 'box brought warehouse']"
+5,1 - Robot negative,"['1','3','5']",none,none,robot,[],[]
+6,1 - Robot negative,"['1','3','5']",none,none,human,[],[]
+7,1 - Robot negative,"['1','3','5']",none,none,robot,[],[]
+8,1 - Robot negative,"['1','3','5']",none,none,human,[],"[""['letter placed envelope', 'stamp put envelope', 'cart picked_up loc3', 'package picked_up loc2_entradaFME', 'cart leaved loc3', 'records placed box', 'box brought warehouse']""]"
+9,1 - Robot negative,"['1','3','5']",none,none,human,[],[]
+1,1 - Robot negative,"['1','2','7']",none,none,robot,['cutter used_to_open package'],[]
+2,1 - Robot negative,"['1','2','7']",none,none,robot,['cutter used_to_open package'],[]
+3,1 - Robot negative,"['1','2','7']",none,none,robot,['cutter used_to_open package'],[]
+4,1 - Robot negative,"['1','2','7']",none,none,human,[],[]
+5,1 - Robot negative,"['1','2','7']",none,none,robot,['cutter used_to_open package'],[]
+6,1 - Robot negative,"['1','2','7']",none,none,human,['material organized loc1'],[]
+7,1 - Robot negative,"['1','2','7']",none,none,robot,['cutter used_to_open package'],[]
+8,1 - Robot negative,"['1','2','7']",none,none,human,['cutter used_to_open package'],[]
+9,1 - Robot negative,"['1','2','7']",none,none,human,[],[]
+1,1 - Robot negative,"['2','3','4','6']",none,none,robot,[],"[""['diplomas stamped loc1', 'package picked_up loc2_entradaFME', 'visitor attended loc4', 'trash placed containers']""]"
+2,1 - Robot negative,"['2','3','4','6']",none,none,robot,['visitor attended loc4'],[]
+3,1 - Robot negative,"['2','3','4','6']",none,none,robot,['package picked_up loc2_entradaFME'],[]
+4,1 - Robot negative,"['2','3','4','6']",none,none,human,['diplomas stamped loc1'],"['cart picked_up loc3', 'package picked_up loc2_entradaFME', 'cart leaved loc3', 'visitor attended loc4', 'trash placed containers']"
+5,1 - Robot negative,"['2','3','4','6']",none,none,robot,['package picked_up loc2_entradaFME'],[]
+6,1 - Robot negative,"['2','3','4','6']",none,none,human,[],[]
+7,1 - Robot negative,"['2','3','4','6']",none,none,robot,[],[]
+8,1 - Robot negative,"['2','3','4','6']",none,none,human,['trash placed containers'],[]
+9,1 - Robot negative,"['2','3','4','6']",none,none,human,[],[]

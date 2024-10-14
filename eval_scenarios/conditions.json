@@ -1,8 +1,8 @@
 {
     "1": "The robot can't pick pointy objects.",
-    "2": "The robot is prefered to not be attending visitats because some want human contact",
-    "3": "The robot cannot pick up the catala_paquet because a human has to sign it",
-    "4": "The human doesn't want to get catala_tinta in his hands",
+    "2": "The robot is prefered to not be attending visitors because some of them want human contact",
+    "3": "The robot cannot pick up the package because a human has to sign it",
+    "4": "The human doesn't want to get ink in his hands",
     "5": "Is better if robot doesn't leave the office alone",
     "6": "The human doesn't like organizing stuff",
     "7": "The elevator is broken (the robot can't go upstaris)",

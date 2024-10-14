@@ -1,38 +1,38 @@
 {
     "1": {
-        "goal": "We need to send some letters to Generalitat.",
-        "subgoals_human": "[['letter', 'placed', 'catala_sobre'],['stamp', 'put', 'catala_sobre']]",
-        "subgoals_robot": "[['letter', 'placed', 'catala_sobre'],['stamp', 'put', 'catala_sobre']]"
+        "goal": "We need to send some letters to the Generalitat.",
+        "subgoals_human": ["letter placed envelope", "stamp put envelope"],
+        "subgoals_robot": ["letter placed envelope", "stamp put envelope"]
     },
-    "2":{
-        "goal": "Stamp diplomas for all out employees.",
-        "subgoals_human": "[['diplomas', 'stamped', 'loc1']]",
-        "subgoals_robot": "[['diplomas', 'stamped', 'loc1']]"
+    "2": {
+        "goal": "Stamp diplomas for all our employees.",
+        "subgoals_human": ["diplomas stamped loc1"],
+        "subgoals_robot": ["diplomas stamped loc1"]
     },
     "3": {
-        "goal": "Pick up catala_paquet recieved.",
-        "subgoals_human": "[['catala_carret','picked_up','loc3'],['catala_paquet', 'picked_up', 'loc2_entradaFME'],['catala_carret','leaved','loc3']]",
-        "subgoals_robot": "[['catala_paquet', 'picked_up', 'loc2_entradaFME']]"
+        "goal": "Pick up received package.",
+        "subgoals_human": ["cart picked_up loc3", "package picked_up loc2_entradaFME", "cart leaved loc3"],
+        "subgoals_robot": ["package picked_up loc2_entradaFME"]
     },
-    "4":{
-        "goal": "catala_Atendre a visitant.",
-        "subgoals_human": "[['visitant', 'catala_atès', 'loc4']]",
-        "subgoals_robot": "[['visitant', 'catala_atès', 'loc4']]"
+    "4": {
+        "goal": "Attend to the visitor.",
+        "subgoals_human": ["visitor attended loc4"],
+        "subgoals_robot": ["visitor attended loc4"]
     },
     "5": {
-        "goal": "Bring box catala_actas to the catala_magatzem.",
-        "subgoals_human": "[['catala_actas', 'placed', 'box'],['box', 'bringed', 'catala_magatzem']]",
-        "subgoals_robot": "[['catala_actas', 'placed', 'box'],['box', 'bringed', 'catala_magatzem']]"
+        "goal": "Bring the box of records to the warehouse.",
+        "subgoals_human": ["records placed box", "box brought warehouse"],
+        "subgoals_robot": ["records placed box", "box brought warehouse"]
     },
-    "6":{
-        "goal": "catala_TreureElFems.",
-        "subgoals_human": "[['fems', 'placed', 'contenidors']]",
-        "subgoals_robot": "[['fems', 'placed', 'contenidors']]"
+    "6": {
+        "goal": "Take out the trash.",
+        "subgoals_human": ["trash placed containers"],
+        "subgoals_robot": ["trash placed containers"]
     },
-    "7":{
-        "goal": "Unpack recieved catala_paquet and organize material",
-        "subgoals_human": "[['cutter','used_to_open','catala_paquet'],['material','organized','loc1']]",
-        "subgoals_robot": "[['cutter','used_to_open','catala_paquet'],['material','organized','loc1']",
+    "7": {
+        "goal": "Unpack received package and organize material.",
+        "subgoals_human": ["cutter used_to_open package", "material organized loc1"],
+        "subgoals_robot": ["cutter used_to_open package", "material organized loc1"],
         "dependencies": ["3"]
     }
 }
