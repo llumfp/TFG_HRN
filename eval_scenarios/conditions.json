@@ -1,11 +1,38 @@
 {
-    "1": "The robot can't pick pointy objects.",
-    "2": "The robot is prefered to not be attending visitors because some of them want human contact",
-    "3": "The robot cannot pick up the package because a human has to sign it",
-    "4": "The human doesn't want to get ink in his hands",
-    "5": "Is better if robot doesn't leave the office alone",
-    "6": "The human doesn't like organizing stuff",
-    "7": "The elevator is broken (the robot can't go upstaris)",
-    "8": "The human is disgusted to throw rubish away",
-    "9": "The human doesn't like to do very repetitive tasks"
+    "1": {
+        "condition": "The robot can't pick pointy objects.",
+        "disfavour": ["cutter used_to_open package"]
+    },
+    "2": {
+        "condition": "The robot is prefered to not be attending visitors because some of them want human contact",
+        "disfavour": ["visitor attended loc4"]
+    },
+    "3": {
+        "condition": "The robot cannot pick up the package because a human has to sign it",
+        "disfavour": ["package picked_up loc2_entradaFME"]
+    },
+    "4": {
+        "condition": "The human doesn't want to get ink in his hands",
+        "disfavour": ["diplomas stamped loc1"]
+    },
+    "5": {
+        "condition": "Is better if robot doesn't leave the office alone",
+        "disfavour": ["package picked_up loc2_entradaFME", "trash placed containers", "envelope sent correus"]
+    },
+    "6": {
+        "condition": "The human doesn't like organizing stuff",
+        "disfavour": ["material organized loc1"]
+    },
+    "7": {
+        "condition": "The elevator is broken (the robot can't go upstairs)",
+        "disfavour": ["envelope sent correus", "trash placed containers"]
+    },
+    "8": {
+        "condition": "The human is disgusted to throw rubbish away",
+        "disfavour": ["trash placed containers"]
+    },
+    "9": {
+        "condition": "The human doesn't like to do very repetitive tasks",
+        "disfavour": ["letter placed envelope", "stamp put envelope", "diplomas stamped loc1"]
+    }
 }

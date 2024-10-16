@@ -1,4 +1,4 @@
-num_condition;type;goals_;GT_subgoals_disfavour;GT_subgoals_favour
+num_condition;type;goals;GT_subgoals_disfavour;GT_subgoals_favour
 1;1 - Robot negative;['1','3','5'];none;none
 2;1 - Robot negative;['1','3','5'];none;none
 3;1 - Robot negative;['1','3','5'];none;none
