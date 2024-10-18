@@ -9,3 +9,5 @@
 - Executar una acció dinàmica i amb una eina
 - Gestionar accions depenents
 - Gestionar GOALS
+- Afegir duracions diferents a les accions
+- Crear una funció de cost on es combinin les 3 dimensions (humà, robot i objectiu comú)
