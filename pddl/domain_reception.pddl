@@ -1,82 +1,104 @@
 (define (domain reception_domain)
 
 (:requirements :typing :durative-actions :fluents :negative-preconditions :action-costs :strips)
-(:types agent loc obj) ; 3 types: agents, locations, objects
+(:types agent loc action tool) ; 3 types: agents, locations, actions, tools
 
 (:predicates
-   ;  (agent_busy ?agent - agent)
     (agent_not_busy ?agent - agent)
-
-    ; goals are formed as: predicate object location
-    ; one predicate asociated to one action
-    (is_into_box ?obj - obj ?loc - loc)
-    (stamped ?obj - obj ?loc - loc)
-    (picked_up ?obj - obj ?loc - loc)
+    (action_done ?agent - agent ?action - action)
+    (is_at ?agent - agent ?loc - loc)
+    (hand_free ?agent - agent)
+    (holding ?agent - agent ?tool - tool)
+    (goal_reached ?agent - agent ?goal - goal)
 )
 
 (:functions
-    ; each action has an associated cost
-    (stamp_cost ?agent - agent ?obj - obj ?loc - loc)
-    (put_cost ?agent - agent ?obj - obj ?loc - loc)
-    (pick_up_cost ?agent - agent ?obj - obj ?loc - loc)
+    (action_cost ?agent - agent ?action - action ?loc - loc)
+    (duration_action ?action - action ?agent - agent)
     (total-cost)
 )
 
-; each action has its associated predicate as an effect
-; each action has 3 params: agent, object, location
-
-
-(:durative-action stamp
- :parameters (?agent - agent ?obj - obj ?loc - loc)
- :duration (= ?duration 10)
- :condition (and
-    (at start (agent_not_busy ?agent))
+(:durative-action basic_action
+    :parameters (?agent - agent ?action - action ?loc - loc)
+    :duration (= ?duration (duration_action ?action ?agent))
+    :condition (and
+        (at start (and (agent_not_busy ?agent) (hand_free ?agent) (is_at ?agent ?loc)))
     )
- :effect (and
-    
-    (at end (stamped ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
-    (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
-    (at end (agent_not_busy ?agent))
-
-    (at start (increase (total-cost) (stamp_cost ?agent ?obj ?loc)))
+    :effect (and 
+        (at start (and 
+            (not (agent_not_busy ?agent)) 
+            (increase (total-cost) (action_cost ?agent ?action ?loc))
+        ))
+        (at end (and 
+            (action_done ?agent ?action)
+            (agent_not_busy ?agent)
+        ))
     )
 )
 
-(:durative-action pick_up
- :parameters (?agent - agent ?obj - obj ?loc - loc)
- :duration (= ?duration 10)
- :condition (and
-    (at start (agent_not_busy ?agent))
+(:durative-action dynamic_action
+    :parameters (?agent - agent ?action - action ?start_loc - loc ?end_loc - loc)
+    :duration (= ?duration (duration_action ?action ?agent))
+    :condition (and
+        (at start (and (agent_not_busy ?agent) (hand_free ?agent) (is_at ?agent ?start_loc)))
     )
- :effect (and
-    
-    (at end (picked_up ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
-    (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
-    (at end (agent_not_busy ?agent))
-
-    (at start (increase (total-cost) (pick_up_cost ?agent ?obj ?loc)))
+    :effect (and 
+        (at start (and 
+            (not (agent_not_busy ?agent)) 
+            (increase (total-cost) (action_cost ?agent ?action ?start_loc))
+        ))
+        (at end (and 
+            (action_done ?agent ?action)
+            (agent_not_busy ?agent)
+            (is_at ?agent ?end_loc)
+        ))
     )
 )
 
-(:durative-action put
- :parameters (?agent - agent ?obj - obj ?loc - loc)
- :duration (= ?duration 10)
- :condition (and
-    (at start (agent_not_busy ?agent))
+(:durative-action action_with_tool
+    :parameters (?agent - agent ?action - action ?loc - loc ?tool - tool)
+    :duration (= ?duration (duration_action ?action ?agent))
+    :condition (and
+        (at start (and (agent_not_busy ?agent) (is_at ?agent ?loc) (holding ?agent ?tool)))
+    ) 
+    :effect (and 
+        (at start (and 
+            (not (agent_not_busy ?agent)) 
+            (increase (total-cost) (action_cost ?agent ?action ?loc))
+        ))
+        (at end (and 
+            (action_done ?agent ?action)
+            (agent_not_busy ?agent)
+            (not (holding ?agent ?tool))
+            (hand_free ?agent)
+        ))
     )
- :effect (and
-    
-    (at end (is_into_box ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
-    (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
-    (at end (agent_not_busy ?agent))
+)
 
-    (at start (increase (total-cost) (put_cost ?agent ?obj ?loc)))
+(:action pick_up_tool
+    :parameters (?agent - agent ?tool - tool ?loc - loc)
+    :precondition (and (agent_not_busy ?agent) (hand_free ?agent) (is_at ?agent ?loc) (is_at ?tool ?loc))
+    :effect (and (holding ?agent ?tool) (not (hand_free ?agent)))
+)
+
+(:durative-action dynamic_action_with_tool
+    :parameters (?agent - agent ?action - action ?start_loc - loc ?end_loc - loc ?tool - tool)
+    :duration (= ?duration (duration_action ?action ?agent))
+    :condition (and
+        (at start (and (agent_not_busy ?agent) (is_at ?agent ?start_loc) (holding ?agent ?tool)))
+    ) 
+    :effect (and 
+        (at start (and 
+            (not (agent_not_busy ?agent)) 
+            (increase (total-cost) (action_cost ?agent ?action ?start_loc))
+        ))
+        (at end (and 
+            (action_done ?agent ?action)
+            (agent_not_busy ?agent)
+            (not (holding ?agent ?tool))
+            (hand_free ?agent)
+            (is_at ?agent ?end_loc)
+        ))
     )
 )
 )

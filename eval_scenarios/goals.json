@@ -1,64 +1,64 @@
 {
     "1": {
-        "goal": "We need to send some letters to the Generalitat.",
-        "subgoals_human": ["letter placed envelope", "stamp put envelope","envelope sent correus"],
-        "subgoals_robot": ["letter placed envelope", "stamp put envelope","envelope sent correus"]
+        "goal": "Necesitamos enviar algunas cartas a la Generalitat.",
+        "subgoals_human": ["carta colocada sobre", "sello puesto sobre", "sobre enviado correus"],
+        "subgoals_robot": ["carta colocada sobre", "sello puesto sobre", "sobre enviado correus"]
     },
     "2": {
-        "goal": "Stamp diplomas for all our employees.",
-        "subgoals_human": ["diplomas stamped loc1"],
-        "subgoals_robot": ["diplomas stamped loc1"]
+        "goal": "Sellar los diplomas de todos nuestros empleados.",
+        "subgoals_human": ["diplomas sellados loc1"],
+        "subgoals_robot": ["diplomas sellados loc1"]
     },
     "3": {
-        "goal": "Pick up received package.",
-        "subgoals_human": ["cart picked_up loc3", "package picked_up loc2_entradaFME", "cart leaved loc3"],
-        "subgoals_robot": ["package picked_up loc2_entradaFME"]
+        "goal": "Recoger el paquete recibido.",
+        "subgoals_human": ["carrito recogido loc3", "paquete recogido loc2_entradaFME", "carrito dejado loc3"],
+        "subgoals_robot": ["paquete recogido loc2_entradaFME"]
     },
     "4": {
-        "goal": "Attend to the visitor.",
-        "subgoals_human": ["visitor attended loc4"],
-        "subgoals_robot": ["visitor attended loc4"]
+        "goal": "Atender al visitante.",
+        "subgoals_human": ["visitante atendido loc4"],
+        "subgoals_robot": ["visitante atendido loc4"]
     },
     "5": {
-        "goal": "Bring the box of records to the warehouse.",
-        "subgoals_human": ["records placed box", "box brought warehouse"],
-        "subgoals_robot": ["records placed box", "box brought warehouse"]
+        "goal": "Llevar la caja de registros al almacén.",
+        "subgoals_human": ["registros colocados caja", "caja llevada almacén"],
+        "subgoals_robot": ["registros colocados caja", "caja llevada almacén"]
     },
     "6": {
-        "goal": "Take out the trash.",
-        "subgoals_human": ["trash placed containers"],
-        "subgoals_robot": ["trash placed containers"]
+        "goal": "Sacar la basura.",
+        "subgoals_human": ["basura colocada contenedores"],
+        "subgoals_robot": ["basura colocada contenedores"]
     },
     "7": {
-        "goal": "Unpack received package and organize material.",
-        "subgoals_human": ["cutter used_to_open package", "material organized loc1"],
-        "subgoals_robot": ["cutter used_to_open package", "material organized loc1"],
+        "goal": "Desempaquetar el paquete recibido y organizar el material.",
+        "subgoals_human": ["cúter usado paquete", "material organizado loc1"],
+        "subgoals_robot": ["cúter usado paquete", "material organizado loc1"],
         "dependencies": ["3"]
     },
     "8": {
         "goal": "Hacer llamadas pendientes.",
-        "subgoals_human": ["pending_calls reviewed loc5", "pending_calls called loc5"],
-        "subgoals_robot": ["pending_calls reviewed loc5", "pending_calls called loc5"]
+        "subgoals_human": ["llamadas_pendientes revisadas loc5", "llamadas_pendientes realizadas loc5"],
+        "subgoals_robot": ["llamadas_pendientes revisadas loc5", "llamadas_pendientes realizadas loc5"]
     },
     "9": {
-        "goal": "Clean the common area.",
-        "subgoals_human": ["furniture organized loc1", "windows cleaned loc1", "surfaces cleaned loc1"],
-        "subgoals_robot": ["furniture organized loc1", "windows cleaned loc1", "surfaces cleaned loc1"]
+        "goal": "Limpiar el área común.",
+        "subgoals_human": ["muebles organizados loc1", "ventanas limpiadas loc1", "superficies limpiadas loc1"],
+        "subgoals_robot": ["muebles organizados loc1", "ventanas limpiadas loc1", "superficies limpiadas loc1"]
     },
     "10": {
-        "goal": "Scan and digitize documents.",
-        "subgoals_human": ["documents placed_in_scanner loc2", "files digitally_organized loc3"],
-        "subgoals_robot": ["documents placed_in_scanner loc2", "files digitally_organized loc3"]
+        "goal": "Escanear y digitalizar documentos.",
+        "subgoals_human": ["documentos colocados escáner", "archivos organizados_digitalmente loc3"],
+        "subgoals_robot": ["documentos colocados escáner", "archivos organizadosdigitalmente loc3"]
     },
     "11": {
-        "goal": "Guide a visitor through the institute.",
-        "subgoals_human": ["visitor information_provided loc4", "visitor guided loc4-loc7"],
-        "subgoals_robot": ["visitor information_provided loc4", "visitor guided loc4-loc7"]
+        "goal": "Guiar a un visitante por el instituto.",
+        "subgoals_human": ["visitante informado loc4", "visitante guiado loc4-loc7"],
+        "subgoals_robot": ["visitante informado loc4", "visitante guiado loc4-loc7"]
     },
     "12": {
-        "goal": "Prepare a meeting room.",
-        "subgoals_human": ["materials picked loc2", "room organized loc2"],
-        "subgoals_robot": ["materials picked loc2", "room organized loc2"]
+        "goal": "Preparar una sala de reuniones.",
+        "subgoals_human": ["materiales recogidos loc2", "sala organizada loc2"],
+        "subgoals_robot": ["materiales recogidos loc2", "sala organizada loc2"]
     },
     "13": {
         "goal": "Acompañar a alguien al lugar de reparación. Acompañar a alguien al contador de gas y luz.",
@@ -66,44 +66,44 @@
         "subgoals_robot": ["persona acompañada loc6"]
     },
     "14": {
-        "goal": "Manage inventory of office supplies.",
-        "subgoals_human": ["inventory reviewed loc3", "stock registered loc3"],
-        "subgoals_robot": ["inventory reviewed loc3", "stock registered loc3"]
+        "goal": "Gestionar inventario de suministros de oficina.",
+        "subgoals_human": ["inventario revisado loc3", "stock registrado loc3"],
+        "subgoals_robot": ["inventario revisado loc3", "stock registrado loc3"]
     },
     "15": {
-        "goal": "Perform periodic maintenance on reception robots.",
-        "subgoals_human": ["manual_diagnosis performed loc7", "minor_adjustments made loc7"],
-        "subgoals_robot": ["self_diagnosis performed loc7", "error_report generated loc7"]
+        "goal": "Realizar mantenimiento periódico a los robots de recepción.",
+        "subgoals_human": ["diagnóstico manual loc7", "ajustes menores loc7"],
+        "subgoals_robot": ["autodiagnóstico realizado loc7", "reporte generado loc7"]
     },
     "16": {
-        "goal": "Handle internal correspondence.",
-        "subgoals_human": ["mail identified loc5", "mail transported owner_desk"],
-        "subgoals_robot": ["mail identified loc5", "mail transported owner_desk"]
+        "goal": "Manejar la correspondencia interna.",
+        "subgoals_human": ["correo identificado loc5", "correo transportado escritorio"],
+        "subgoals_robot": ["correo identificado loc5", "correo transportado escritorio"]
     },
     "17": {
-        "goal": "Charge electronic devices.",
-        "subgoals_human": ["devices connected loc2", "charging_status verified loc2"],
-        "subgoals_robot": ["devices connected loc2", "charging_status verified loc2"]
+        "goal": "Cargar dispositivos electrónicos.",
+        "subgoals_human": ["dispositivos conectados loc2", "estado_carga verificado loc2"],
+        "subgoals_robot": ["dispositivos conectados loc2", "estado_carga verificado loc2"]
     },
     "18": {
-        "goal": "Supply office materials to workstations.",
-        "subgoals_human": ["materials placed workstation_loc1"],
-        "subgoals_robot": ["materials placed workstation_loc1"]
+        "goal": "Suministrar materiales de oficina a las estaciones de trabajo.",
+        "subgoals_human": ["materiales colocados estación_trabajo_loc1"],
+        "subgoals_robot": ["materiales colocados estación_trabajo_loc1"]
     },
     "19": {
-        "goal": "Prepare welcome kits for new employees or visitors.",
-        "subgoals_human": ["kits_personalized assembled loc1", "material reviewed loc1"],
-        "subgoals_robot": ["kits_personalized assembled loc1", "material reviewed loc1"]
+        "goal": "Preparar kits de bienvenida para nuevos empleados o visitantes.",
+        "subgoals_human": ["kits_personalizados ensamblados loc1"],
+        "subgoals_robot": ["kits_personalizados ensamblados loc1"]
     },
     "20": {
-        "goal": "Collect and recycle old electronic devices.",
-        "subgoals_human": ["devices collected loc1", "devices transported to recycling point loc7"],
-        "subgoals_robot": ["devices collected loc1", "transported to recycling point loc7"]
+        "goal": "Recoger y reciclar dispositivos electrónicos antiguos.",
+        "subgoals_human": ["dispositivos recogidos loc1", "dispositivos llevados punto_reciclaje_loc7"],
+        "subgoals_robot": ["dispositivos recogidos loc1", "transportados punto_reciclaje_loc7"]
     },
 
     "21": {
-        "goal": "Tancar les portes assegurant que no hi ha ningú al final del dia.",
-        "subgoals_human": ["instalaciones revisadas loc?","luces apagadas loc?","puertas cerradas loc7ENTRADA"],
-        "subgoals_robot": ["instalaciones revisadas loc?","luces apagadas loc?","puertas cerradas loc7ENTRADA"]
+        "goal": "Cerrar las puertas asegurando que no hay nadie al final del día.",
+        "subgoals_human": ["instalaciones revisadas loc?", "luces apagadas loc?", "puertas cerradas loc7ENTRADA"],
+        "subgoals_robot": ["instalaciones revisadas loc?", "luces apagadas loc?", "puertas cerradas loc7ENTRADA"]
     }
 }
