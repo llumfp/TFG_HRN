@@ -44,4 +44,15 @@ Executing tests in the new domain
     - X queries
     - X input tokens
     - X output tokens
-    - COST: $
+    - COST: <0.01$
+
+TEST 21/10/2024
+Executing tests in Spanish
+    - 34 scenarios
+    - 28 queries
+    - 17.712 input tokens
+    - 1.164 output tokens
+    - COST: <0.01$
+
+Executing tests in Spanish
+    - Failed 

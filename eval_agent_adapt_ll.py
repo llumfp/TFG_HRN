@@ -52,6 +52,7 @@ class EvalAgentAdapt:
     #     plan = [(float(p[0]), p[1].split(' '), float(p[2])) for p in plan]
     #     return plan
 
+
     def subgoal_str_to_dict(self, subgoal):
         subgoal_split = subgoal.split(", ")
         subgoal_dict = {"attribute": subgoal_split[1], "obj": subgoal_split[0], "loc": subgoal_split[2]}

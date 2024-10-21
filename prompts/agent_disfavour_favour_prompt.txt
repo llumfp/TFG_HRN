@@ -1,83 +1,83 @@
-A human and a robot are collaborating together to achieve some goals. The tasks are distributed between the agents.
+Un humano y un robot estan colaborando juntos para lograr algunas metas. Las tareas se distribuyen entre los agentes.
 
-I have the following tasks:
-mop, used to clean, floor
-cloth, used to clean, floor
-knife, stored, table
-napkin, stored, table
-salmon, cooked, hob
+Tengo las siguientes tareas:
+trapeador, usado para limpiar, suelo
+trapo, usado para limpiar, suelo
+cuchillo, guardado, mesa
+servilleta, guardada, mesa
+salmon, cocinado, fogon
 
-The agent is distracted.
+El agente esta distraido.
 
-The agent should disfavour these tasks:
-salmon, cooked, hob
-knife, stored, table
+El agente deberia desfavorecer estas tareas:
+salmon, cocinado, fogon
+cuchillo, guardado, mesa
 
-The agent should favour the tasks:
-None
+El agente deberia favorecer estas tareas:
+Ninguna
 
-I have the following tasks:
-mop, used to clean, floor
-cloth, used to clean, floor
-knife, stored, table
-napkin, stored, table
-salmon, cooked, hob
+Tengo las siguientes tareas:
+trapeador, usado para limpiar, suelo
+trapo, usado para limpiar, suelo
+cuchillo, guardado, mesa
+servilleta, guardada, mesa
+salmon, cocinado, fogon
 
-The agent has back problems.
+El agente tiene problemas de espalda.
 
-The agent should disfavour these tasks:
-mop, used to clean, floor
-cloth, used to clean, floor
+El agente deberia desfavorecer estas tareas:
+trapeador, usado para limpiar, suelo
+trapo, usado para limpiar, suelo
 
-The agent should favour the tasks:
-None
+El agente deberia favorecer estas tareas:
+Ninguna
 
-I have the following tasks:
-spoon, stored, drawer
-salmon, cooked, hob
+Tengo las siguientes tareas:
+cuchara, guardada, cajon
+salmon, cocinado, fogon
 
-The agent loves to cook.
+Al agente le encanta cocinar.
 
-The agent should disfavour these tasks:
-None
+El agente deberia desfavorecer estas tareas:
+Ninguna
 
-The agent should favour the tasks:
-salmon, cooked, hob
+El agente deberia favorecer estas tareas:
+salmon, cocinado, fogon
 
-I have the following tasks:
-coffee cup, stored, tall cupboard
-fork, stored, drawer
-coke, placed, trash can
+Tengo las siguientes tareas:
+taza de cafe, guardada, armario alto
+tenedor, guardado, cajon
+refresco, colocado, cubo de basura
 
-The agent can't pick pointy objects.
+El agente no puede coger objetos puntiagudos.
 
-The agent should disfavour these tasks:
-fork, stored, drawer
+El agente deberia desfavorecer estas tareas:
+tenedor, guardado, cajon
 
-The agent should favour the tasks:
-None
+El agente deberia favorecer estas tareas:
+Ninguna
 
-I have the following tasks:
-coffee cup, stored, tall cupboard
-mop, used to clean, floor
-salmon, cooked, hob
+Tengo las siguientes tareas:
+taza de cafe, guardada, armario alto
+trapeador, usado para limpiar, suelo
+salmon, cocinado, fogon
 
-The agent can't pick pointy objects.
+El agente no puede coger objetos puntiagudos.
 
-The agent should disfavour these tasks:
-None
+El agente deberia desfavorecer estas tareas:
+Ninguna
 
-The agent should favour the tasks:
-None
+El agente deberia favorecer estas tareas:
+Ninguna
 
-I have the following tasks:
-coke, placed, trash can
-mop, used to clean, floor
+Tengo las siguientes tareas:
+refresco, colocado, cubo de basura
+trapeador, usado para limpiar, suelo
 
-The agent can't handle food.
+El agente no puede manipular alimentos.
 
-The agent should disfavour these tasks:
-None
+El agente deberia desfavorecer estas tareas:
+Ninguna
 
-The agent should favour the tasks:
-None
+El agente deberia favorecer estas tareas:
+Ninguna

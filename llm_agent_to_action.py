@@ -152,15 +152,15 @@ class LLMAgentToActionAllocationReasoner:
         return agent, subgoals_disfavour_filtered, subgoals_favour_filtered
 
     def extract_disfavour_subgoals(self, llm_response):
-        idx1 = llm_response.index("disfavour these tasks:\n")
-        idx2 = llm_response.index("\n\nThe agent should favour")
-        l = len("disfavour these tasks:\n")
+        idx1 = llm_response.index("desfavorecer estas tareas:\n")
+        idx2 = llm_response.index("\n\nEl agente deberia favorecer")
+        l = len("desfavorecer estas tareas:\n")
         subgoals = llm_response[idx1 + l: idx2]
         return subgoals
 
     def extract_favour_subgoals(self, llm_response):
-        idx1 = llm_response.index("favour the tasks:\n")
-        l = len("favour the tasks:\n")
+        idx1 = llm_response.index("favorecer estas tareas:\n")
+        l = len("favorecer estas tareas:\n")
         subgoals = llm_response[idx1 + l:]
         subgoals = subgoals.rstrip("\n\n")
         return subgoals
@@ -190,45 +190,40 @@ class LLMAgentToActionAllocationReasoner:
         prompt_file = self.prompt_dir + "/agent_event_prompt.txt"
         with open(prompt_file) as file:
             prompt_examples = file.read()
-        prompt = prompt_examples + "I have the following goals:\n\n" + '\n'.join(subgoals) + "\n\n" + agent_preference_or_state + " Which goals, if any, should this person avoid?"
+        prompt = prompt_examples + "Tengo los siguientes objetivos:\n\n" + '\n'.join(subgoals) + "\n\n" + agent_preference_or_state + " ¿Que objetivos, si hay alguno, deberia evitar esta persona?"
         print (prompt)
         return prompt
 
     def create_avoid_prompt(self, subgoals, agent_condition):
-        prompt = "A human and a robot are collaborating together to achieve some goals. Each goal is assigned to one of the two agents.\n\nI have the following goals:\n\nmop, used to clean, floor \ncloth, used to clean, floor \nknife, tidied up, table \nnapkin, tidied up, table\nsalmon, cooked, hob \n\nThe person is distracted.\
-            Which goals, if any, should this agent avoid?\n\nsalmon, cooked, hob\nknife, tidied up, table \n\nI have the following goals:\n\nmop, used to clean, floor \ncloth, used to clean, floor \nknife, tidied up, table \
-                \nnapkin, tidied up, table \nsalmon, cooked, hob\n\nThe human has back problems. Which goals, if any, should this agent avoid?\n\nmop, used to clean, floor \ncloth, used to clean, floor\n\n\
-                    I have the following goals:\n\nspoon, tidied up, drawer \n\n The human is distracted. The human has back problems. Which goals, if any, should this agent avoid?\n\nNone\n\n\
-                    I have the following goals:\n\nfork, tidied up, drawer \n\n The robot has low dexterity. Which goals, if any, should this agent avoid?\n\nNone\n\n\
-                        I have the following goals:\n\n" + '\n'.join(subgoals) + "\n\n" + agent_condition + " Which goals, if any, should this agent avoid?"
+        prompt = "Un humano y un robot estan colaborando para alcanzar algunos objetivos. Cada objetivo se asigna a uno de los dos agentes.\n\nTengo los siguientes objetivos:\n\nmopa, usada para limpiar, suelo \npaño, usado para limpiar, suelo \ncuchillo, colocado, mesa \nservilleta, colocada, mesa\nsalmon, cocinado, cocina \n\nLa persona esta distraida. ¿Que objetivos, si hay alguno, deberia evitar este agente?\n\n\n\nTengo los siguientes objetivos:\n\nmopa, usada para limpiar, suelo \npaño, usado para limpiar, suelo \ncuchillo, colocado, mesa \nservilleta, colocada, mesa \nsalmon, cocinado, cocina\n\nEl humano tiene problemas de espalda. ¿Que objetivos, si hay alguno, deberia evitar este agente?\n\nmopa, usada para limpiar, suelo \npaño, usado para limpiar, suelo\n\n\n\nTengo los siguientes objetivos:\n\ncuchara, colocada, cajon \n\nEl humano esta distraido. El humano tiene problemas de espalda. ¿Que objetivos, si hay alguno, deberia evitar este agente?\n\nNinguno\n\n\n\nTengo los siguientes objetivos:\n\ntenedor, colocado, cajon \n\nEl robot tiene poca destreza. ¿Que objetivos, si hay alguno, deberia evitar este agente?\n\nNinguno\n\n\n\nTengo los siguientes objetivos:\n\n" + '\n'.join(subgoals) + "\n\n" + agent_condition + " ¿Que objetivos, si hay alguno, deberia evitar este agente?"
         return prompt
     
     def create_favour_disfavour_prompt(self, subgoals, agent_condition):
         prompt_file = self.prompt_dir + "/agent_disfavour_favour_prompt.txt"
         with open(prompt_file) as file:
             prompt_examples = file.read()
-        prompt = prompt_examples + "\n\nI have the following tasks:\n" + subgoals + "\n\n" + agent_condition
+        prompt = prompt_examples + "\n\nTengo las siguientes tareas:\n" + subgoals + "\n\n" + agent_condition
         return prompt
 
     def create_favour_prompt(self, subgoals, agent_condition):
         prompt_file = self.prompt_dir + "/agent_favour_prompt.txt"
         with open(prompt_file) as file:
             prompt_examples = file.read()
-        prompt = prompt_examples + "\n\nTest:\nI have the following goals:\n\n" + subgoals + "\n\n" + agent_condition + " Which goals, if any, should be assigned to this agent?"
+        prompt = prompt_examples + "\n\nTest:\nTengo los siguientes objetivos:\n\n" + subgoals + "\n\n" + agent_condition + " ¿Que objetivos, si hay alguno, deberian ser asignados a este agente?"
         return prompt
 
     def create_disfavour_prompt(self, subgoals, agent_condition):
         prompt_file = self.prompt_dir + "/agent_disfavour_prompt.txt"
         with open(prompt_file) as file:
             prompt_examples = file.read()
-        prompt = prompt_examples + "\n\nTest:\nI have the following goals:\n\n" + subgoals + "\n\n" + agent_condition + " Which goals, if any, should not be assigned to this agent?"
+        prompt = prompt_examples + "\n\nTest:\nTengo los siguientes objetivos:\n\n" + subgoals + "\n\n" + agent_condition + " ¿Que objetivos, si hay alguno, no deberian ser asignados a este agente?"
         return prompt
 
     def query_llm(self, prompt):
 
         client = openai.OpenAI()
 
-        # Función de reintento con backoff exponencial
+        # Funcion de reintento con backoff exponencial
         @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(100))
         def completion_with_backoff(**kwargs):
             # return client.beta.chat.completions.parse(**kwargs)
@@ -236,7 +231,7 @@ class LLMAgentToActionAllocationReasoner:
 
         # Definimos los mensajes en formato de chat
         messages = [
-            {"role": "system", "content": "You are a helpful assistant that will have to select if and agent has to favour or disfavour some tasks. Follow very strictly the format from the given examples."},
+            {"role": "system", "content": "You are a helpful assistant that will have to select if and agent has to favour or disfavour some tasks. Follow very strictly the format from the given examples. Es muy importante que no escribas los acentos ya que toda la interaccion sera en español pero NO PUEDE TENER ACENTOS."},
             {"role": "user", "content": prompt}
         ]
 

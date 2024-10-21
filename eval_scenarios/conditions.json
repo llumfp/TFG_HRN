@@ -1,38 +1,38 @@
 {
     "1": {
-        "condition": "The robot can't pick pointy objects.",
-        "disfavour": ["cutter used_to_open package"]
+        "condition": "El robot no puede recoger objetos puntiagudos.",
+        "disfavour": ["cuter usado paquete"]
     },
     "2": {
-        "condition": "The robot is prefered to not be attending visitors because some of them want human contact",
-        "disfavour": ["visitor attended loc4"]
+        "condition": "Se prefiere que el robot no atienda a los visitantes porque algunos de ellos desean contacto humano.",
+        "disfavour": ["visitante atendido loc4"]
     },
     "3": {
-        "condition": "The robot cannot pick up the package because a human has to sign it",
-        "disfavour": ["package picked_up loc2_entradaFME"]
+        "condition": "El robot no puede recoger el paquete porque un humano debe firmarlo.",
+        "disfavour": ["paquete recogido loc2_entradaFME"]
     },
     "4": {
-        "condition": "The human doesn't want to get ink in his hands",
-        "disfavour": ["diplomas stamped loc1"]
+        "condition": "La persona no quiere mancharse las manos con tinta.",
+        "disfavour": ["diplomas sellados loc1"]
     },
     "5": {
-        "condition": "Is better if robot doesn't leave the office alone",
-        "disfavour": ["package picked_up loc2_entradaFME", "trash placed containers", "envelope sent correus"]
+        "condition": "Es mejor si el robot no sale solo de la oficina.",
+        "disfavour": ["paquete recogido loc2_entradaFME", "basura colocada contenedores", "sobre enviado correus"]
     },
     "6": {
-        "condition": "The human doesn't like organizing stuff",
-        "disfavour": ["material organized loc1"]
+        "condition": "A la persona no le gusta organizar cosas.",
+        "disfavour": ["material organizado loc1"]
     },
     "7": {
-        "condition": "The elevator is broken (the robot can't go upstairs)",
-        "disfavour": ["envelope sent correus", "trash placed containers"]
+        "condition": "El ascensor está roto (el robot no puede subir escaleras).",
+        "disfavour": ["sobre enviado correus", "basura colocada contenedores"]
     },
     "8": {
-        "condition": "The human is disgusted to throw rubbish away",
-        "disfavour": ["trash placed containers"]
+        "condition": "A la persona le desagrada tirar la basura.",
+        "disfavour": ["basura colocada contenedores"]
     },
     "9": {
-        "condition": "The human doesn't like to do very repetitive tasks",
-        "disfavour": ["letter placed envelope", "stamp put envelope", "diplomas stamped loc1"]
+        "condition": "A la persona no le gusta hacer tareas muy repetitivas.",
+        "disfavour": ["carta colocada sobre", "sello puesto sobre", "diplomas sellados loc1"]
     }
 }
