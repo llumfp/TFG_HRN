@@ -36,7 +36,8 @@
     (=(action_cost robot open_package) 100)
     (=(action_cost robot move_box) 10)
     (=(action_cost human move_box) 20)
-    (= (total-cost) 0)
+    (= (total-cost robot) 0)
+    (= (total-cost human) 0)
 )
 
 (:goal (and
@@ -45,5 +46,5 @@
     (action_executed open_package)
     (action_executed move_box)
     ))
-(:metric minimize (+ (* 1 (total-cost))(* 1 (total-time))))
+(:metric minimize (+ (* 1 (total-cost robot))(* 1 (total-cost human))(* 1 (total-time))))
 )

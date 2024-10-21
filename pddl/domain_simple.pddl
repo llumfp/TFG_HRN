@@ -21,7 +21,7 @@
 (:functions
     ; each action has an associated cost
     (action_cost ?agent - agent ?action - action)
-    (total-cost)
+    (total-cost ?agent - agent)
 )
 
 (:durative-action execute_action
@@ -40,7 +40,7 @@
     (at end (agent_not_busy ?agent))
     (at end (handfree ?agent))
     (at end (action_executed ?action))
-    (at start (increase (total-cost) (action_cost ?agent ?action)))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
@@ -78,7 +78,7 @@
     (at end (action_executed ?action))
     (at end (not(is_at ?agent ?init_loc)))
     (at end (is_at ?agent ?end_loc))
-    (at start (increase (total-cost) (action_cost ?agent ?action)))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
@@ -112,7 +112,7 @@
     (at end (agent_not_busy ?agent))
     (at end (action_executed ?action))
     (at end (not (holding ?agent ?tool)))
-    (at start (increase (total-cost) (action_cost ?agent ?action)))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
@@ -136,7 +136,7 @@
     (at end (not (holding ?agent ?tool)))
     (at end (is_at ?agent ?end_loc))
     (at end (is_at ?tool ?end_loc))
-    (at start (increase (total-cost) (action_cost ?agent ?action)))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
