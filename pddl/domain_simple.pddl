@@ -2,7 +2,7 @@
 
 (:requirements :typing :durative-actions :fluents :negative-preconditions :action-costs :strips)
 (:types agent loc action tool - object
-    dynamic_action static_action static_action_tool - action
+    dynamic_action static_action static_action_tool dynamic_action_tool - action
 )
  
 (:predicates
@@ -14,7 +14,7 @@
     (action_executed ?action - action)
      
     (action_loc ?action - action ?loc - loc)
-    (action_end_loc ?action - dynamic_action ?loc - loc)
+    (action_end_loc ?action - action ?loc - loc)
     (action_tool ?action - action ?tool - tool)
 )
 
@@ -50,10 +50,11 @@
  :condition (and
     (at start (agent_not_busy ?agent))
     (at start (is_at ?agent ?init_loc))
-    (at start (handfree ?agent))
+    ; (at start (handfree ?agent))
  )
  :effect (and
     (at end (is_at ?agent ?end_loc))
+    (at end (not(is_at ?agent ?init_loc)))
     (at start (not (agent_not_busy ?agent)))
     (at end (agent_not_busy ?agent))
     )
@@ -75,6 +76,7 @@
     (at start (not (agent_not_busy ?agent)))
     (at end (agent_not_busy ?agent))
     (at end (action_executed ?action))
+    (at end (not(is_at ?agent ?init_loc)))
     (at end (is_at ?agent ?end_loc))
     (at start (increase (total-cost) (action_cost ?agent ?action)))
     )
@@ -113,4 +115,29 @@
     (at start (increase (total-cost) (action_cost ?agent ?action)))
     )
 )
+
+(:durative-action execute_dynamic_action_with_tool
+ :parameters (?action - dynamic_action_tool ?agent - agent ?init_loc - loc ?end_loc - loc ?tool - tool)
+ :duration (= ?duration 10)
+ :condition (and
+    (at start (agent_not_busy ?agent))
+    (at start (is_at ?agent ?init_loc))
+    (at start (action_loc ?action ?init_loc))
+    (at start (action_end_loc ?action ?end_loc))
+    (at start (action_tool ?action ?tool))
+    (at start (holding ?agent ?tool))
+ )
+ :effect (and
+    (at start (not (handfree ?agent)))
+    (at end (handfree ?agent))
+    (at start (not (agent_not_busy ?agent)))
+    (at end (agent_not_busy ?agent))
+    (at end (action_executed ?action))
+    (at end (not (holding ?agent ?tool)))
+    (at end (is_at ?agent ?end_loc))
+    (at end (is_at ?tool ?end_loc))
+    (at start (increase (total-cost) (action_cost ?agent ?action)))
+    )
+)
+
 )
