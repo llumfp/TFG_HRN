@@ -12,7 +12,7 @@
         "disfavour": ["paquete recogido loc2_entradaFME"]
     },
     "4": {
-        "condition": "La persona no quiere mancharse las manos con tinta.",
+        "condition": "El humano no quiere mancharse las manos con tinta.",
         "disfavour": ["diplomas sellados loc1"]
     },
     "5": {
@@ -20,7 +20,7 @@
         "disfavour": ["paquete recogido loc2_entradaFME", "basura colocada contenedores", "sobre enviado correus"]
     },
     "6": {
-        "condition": "A la persona no le gusta organizar cosas.",
+        "condition": "Al humano no le gusta organizar cosas.",
         "disfavour": ["material organizado loc1"]
     },
     "7": {
@@ -28,11 +28,11 @@
         "disfavour": ["sobre enviado correus", "basura colocada contenedores"]
     },
     "8": {
-        "condition": "A la persona le desagrada tirar la basura.",
+        "condition": "Al humano le desagrada tirar la basura.",
         "disfavour": ["basura colocada contenedores"]
     },
     "9": {
-        "condition": "A la persona no le gusta hacer tareas muy repetitivas.",
+        "condition": "Al humano no le gusta hacer tareas muy repetitivas.",
         "disfavour": ["carta colocada sobre", "sello puesto sobre", "diplomas sellados loc1"]
     }
 }

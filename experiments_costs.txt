@@ -56,3 +56,12 @@ Executing tests in Spanish
 
 Executing tests in Spanish
     - Failed 
+
+TEST 23/10/2024
+Other failed tests
+    - 83 requests
+    - 52.592 input tokens
+    - 3.822 output tokens
+    - COST: <0.01$
+
+
