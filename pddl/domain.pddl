@@ -1,102 +1,158 @@
-(define (domain kitchen_collab_domain)
+(define (domain domain_simple)
 
-(:requirements :typing :durative-actions :fluents :negative-preconditions :action-costs :strips)
-(:types agent loc obj) ; 3 types: agents, locations, objects
-
+(:requirements :durative-actions :negative-preconditions :action-costs :adl)
+(:types agent loc action tool goal - object
+    dynamic_action static_action static_action_tool dynamic_action_tool - action
+)
+ 
 (:predicates
-   ;  (agent_busy ?agent - agent)
     (agent_not_busy ?agent - agent)
+    (holding ?agent - agent ?tool - tool)
+    (handfree ?agent - agent)
 
-    ; goals are formed as: predicate object location
-    ; one predicate asociated to one action
-    (stored ?obj - obj ?loc - loc)
-    (used_to_clean ?obj - obj ?loc - loc)
-    (served_as_snack ?obj - obj ?loc - loc)
-    (cooked ?obj - obj ?loc - loc)
+    (is_at ?obj - object ?loc - loc)
+    (action_executed ?action - action ?agent - agent)
+     
+    (action_loc ?action - action ?loc - loc)
+    (action_end_loc ?action - action ?loc - loc)
+    (action_tool ?action - action ?tool - tool)
+
+    (goal_action ?goal - goal ?action - action)
+    (goal_executed ?goal - goal)
+    (goal_finished ?goal - goal ?agent - agent)
 )
 
 (:functions
     ; each action has an associated cost
-    (stored_cost ?agent - agent ?obj - obj ?loc - loc)
-    (used_to_clean_cost ?agent - agent ?obj - obj ?loc - loc)
-    (served_as_snack_cost ?agent - agent ?obj - obj ?loc - loc)
-    (cooked_cost ?agent - agent ?obj - obj ?loc - loc)
-    (total-cost)
+    (action_cost ?agent - agent ?action - action)
+    (total-cost ?agent - agent)
 )
 
-; each action has its associated predicate as an effect
-; each action has 3 params: agent, object, location
-
-(:durative-action store
- :parameters (?agent - agent ?obj - obj ?loc - loc)
+(:durative-action execute_action
+ :parameters (?action - static_action ?agent - agent ?loc - loc)
  :duration (= ?duration 10)
  :condition (and
     (at start (agent_not_busy ?agent))
+    (at start (is_at ?agent ?loc))
+    (at start (action_loc ?action ?loc))
+    (at start (handfree ?agent))
     )
- :effect (and
-    
-    (at end (stored ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
-    (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
-    (at end (agent_not_busy ?agent))
 
-    (at start (increase (total-cost) (stored_cost ?agent ?obj ?loc)))
+ :effect (and
+    (at start (not (handfree ?agent)))
+    (at start (not (agent_not_busy ?agent)))
+    (at end (agent_not_busy ?agent))
+    (at end (handfree ?agent))
+    (at end (action_executed ?action ?agent))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
-(:durative-action serve
- :parameters (?agent - agent ?obj - obj ?loc - loc)
+(:durative-action move_to_loc
+ :parameters (?agent - agent ?init_loc - loc ?end_loc - loc)
  :duration (= ?duration 10)
  :condition (and
     (at start (agent_not_busy ?agent))
-    )
+    (at start (is_at ?agent ?init_loc))
+    ; (at start (handfree ?agent))
+ )
  :effect (and
-    
-    (at end (served_as_snack ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
+    (at end (is_at ?agent ?end_loc))
+    (at end (not(is_at ?agent ?init_loc)))
     (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
     (at end (agent_not_busy ?agent))
-
-    (at start (increase (total-cost) (served_as_snack_cost ?agent ?obj ?loc)))
     )
 )
 
-(:durative-action clean
- :parameters (?agent - agent ?obj - obj ?loc - loc)
+(:durative-action execute_dynamic_action
+ :parameters (?action - dynamic_action ?agent - agent ?init_loc - loc ?end_loc - loc)
  :duration (= ?duration 10)
  :condition (and
     (at start (agent_not_busy ?agent))
-    )
+    (at start (is_at ?agent ?init_loc))
+    (at start (action_loc ?action ?init_loc))
+    (at start (action_end_loc ?action ?end_loc))
+    (at start (handfree ?agent))
+ )
  :effect (and
-    
-    (at end (used_to_clean ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
+    (at start (not (handfree ?agent)))
+    (at end (handfree ?agent))
     (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
     (at end (agent_not_busy ?agent))
-
-    (at start (increase (total-cost) (used_to_clean_cost ?agent ?obj ?loc)))
+    (at end (action_executed ?action ?agent))
+    (at end (not(is_at ?agent ?init_loc)))
+    (at end (is_at ?agent ?end_loc))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
 )
 
-(:durative-action cook
- :parameters (?agent - agent ?obj - obj ?loc - loc)
+(:action take_tool
+:parameters (?agent - agent ?tool - tool ?loc - loc)
+:precondition (and 
+    (handfree ?agent)
+    (is_at ?tool ?loc)
+    (is_at ?agent ?loc)
+)
+:effect (and
+    (holding ?agent ?tool)
+    (not (handfree ?agent))
+)
+)
+
+(:durative-action execute_action_with_tool
+ :parameters (?action - static_action_tool ?agent - agent ?loc - loc ?tool - tool)
  :duration (= ?duration 10)
  :condition (and
     (at start (agent_not_busy ?agent))
-    )
+    (at start (is_at ?agent ?loc))
+    (at start (action_loc ?action ?loc))
+    (at start (action_tool ?action ?tool))
+    (at start (holding ?agent ?tool))
+ )
  :effect (and
-    
-    (at end (cooked ?obj ?loc))
-   ;  (at start (agent_busy ?agent))
+    (at start (not (handfree ?agent)))
+    (at end (handfree ?agent))
     (at start (not (agent_not_busy ?agent)))
-   ;  (at end (not (agent_busy ?agent)))
     (at end (agent_not_busy ?agent))
-
-    (at start (increase (total-cost) (cooked_cost ?agent ?obj ?loc)))
+    (at end (action_executed ?action ?agent))
+    (at end (not (holding ?agent ?tool)))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
     )
+)
+
+(:durative-action execute_dynamic_action_with_tool
+ :parameters (?action - dynamic_action_tool ?agent - agent ?init_loc - loc ?end_loc - loc ?tool - tool)
+ :duration (= ?duration 10)
+ :condition (and
+    (at start (agent_not_busy ?agent))
+    (at start (is_at ?agent ?init_loc))
+    (at start (action_loc ?action ?init_loc))
+    (at start (action_end_loc ?action ?end_loc))
+    (at start (action_tool ?action ?tool))
+    (at start (holding ?agent ?tool))
+ )
+ :effect (and
+    (at start (not (handfree ?agent)))
+    (at end (handfree ?agent))
+    (at start (not (agent_not_busy ?agent)))
+    (at end (agent_not_busy ?agent))
+    (at end (action_executed ?action ?agent))
+    (at end (not (holding ?agent ?tool)))
+    (at end (is_at ?agent ?end_loc))
+    (at end (is_at ?tool ?end_loc))
+    (at start (increase (total-cost ?agent) (action_cost ?agent ?action)))
+    )
+)
+
+(:action finish_goal
+ :parameters (?agent - agent ?goal - goal)
+ :precondition (and
+    (forall (?action - action) (imply (goal_action ?goal ?action) (action_executed ?action ?agent)))
+ )
+ :effect (and
+    (goal_finished ?goal ?agent)
+    (goal_executed ?goal)
+ )
 )
 
 )
