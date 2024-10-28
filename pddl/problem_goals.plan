@@ -1,0 +1,19 @@
+;;!domain: domain_goals
+;;!problem: problem_goals
+
+0.00000: (move_to_loc robot loc2 loc1) [10.00000]
+0.00000: (move_to_loc human loc1 loc2) [10.00000]
+10.00100: (execute_action stamp_diplomas robot loc1) [10.00000]
+10.00100: (take_tool human cutter loc2) [0.00100]
+10.00200: (move_to_loc_with_tool human loc2 loc1 cutter) [10.00000]
+20.00300: (execute_action_with_tool open_package human loc1 cutter) [10.00000]
+30.00400: (move_to_loc_with_tool human loc1 loc2 cutter) [10.00000]
+40.00500: (leave_tool human cutter loc2) [0.00100]
+40.00600: (execute_dynamic_action recieve_package human loc2 loc1) [10.00000]
+40.00700: (move_to_loc robot loc1 loc2) [10.00000]
+50.00700: (finish_goal robot stamp_diplomas_goal) [0.00100]
+50.00700: (finish_goal human package_goal) [0.00100]
+
+; Makespan: 50.007999999999996
+; Metric: 95.008
+; States evaluated: 5191

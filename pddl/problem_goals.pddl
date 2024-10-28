@@ -1,5 +1,5 @@
-(define (problem problem_simple)
-(:domain domain_simple)
+(define (problem problem_goals)
+(:domain domain_goals)
 
 (:objects
     human robot - agent
@@ -21,6 +21,8 @@
     (handfree human)
     (is_at cutter loc2)
     (is_at cart loc2)
+    (toolfree cutter)
+    (toolfree cart)
     (action_loc stamp_diplomas loc1)
     (action_loc recieve_package loc2)
     (action_end_loc recieve_package loc1)
@@ -42,10 +44,14 @@
     (goal_action stamp_diplomas_goal stamp_diplomas)
     (goal_action package_goal recieve_package)
     (goal_action package_goal open_package)
+    (goal_pending stamp_diplomas_goal)
+    (goal_pending package_goal)
 )
 (:goal (and
-    (goal_executed stamp_diplomas_goal)
-    (goal_executed package_goal)
+    (goal_finished stamp_diplomas_goal)
+    (goal_finished package_goal)
+    (is_at cutter loc2)
+    (is_at cart loc2)
     ))
 (:metric minimize (+ (* 1 (total-cost robot))(* 1 (total-cost human))(* 1 (total-time))))
 )

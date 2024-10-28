@@ -85,11 +85,11 @@ if experiment == '1':
     experiment = ''
     
 
-with open(f'pddl/problem_simple{experiment}.plan', 'r') as file:
+with open(f'pddl/problem_goals{experiment}.plan', 'r') as file:
     plan_text = file.read()
 
 # REad file problem_simple.pddl
-with open(f'pddl/problem_simple{experiment}.pddl', 'r') as file:
+with open(f'pddl/problem_goals{experiment}.pddl', 'r') as file:
     problem_pddl_text = file.read()
 # Call the function
 costs = calculate_costs(plan_text, problem_pddl_text)
