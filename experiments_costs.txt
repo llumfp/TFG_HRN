@@ -64,4 +64,11 @@ Other failed tests
     - 3.822 output tokens
     - COST: <0.01$
 
+TEST 28/10/2024
+Executing test for get plan
+    - Due to error in model; we spent 0.15$ because it was using GPT-4
+    - 32 queries to GPT-4
 
+Executing test for get plan
+    - IDK how many queries to GPT-4o-mini
+    - <0.01$
