@@ -50,9 +50,9 @@
     (goal_pending box_goal)
 )
 (:goal (and
-    (goal_finished stamp_diplomas_goal)
-    (goal_finished package_goal)
-    (goal_finished box_goal)
+    (goal_executed stamp_diplomas_goal robot)
+    (goal_executed package_goal human)
+    (goal_executed box_goal robot)
     (is_at cutter loc2)
     (is_at cart loc2)
     ))
