@@ -1,0 +1,13 @@
+;;!domain: domain_basic_duration
+;;!problem: problem_basic_duration
+
+0.00000: (execute_action recieve_package robot loc2 loc1) [10.00000]
+0.00000: (move_to_loc human loc1 loc2) [5.00000]
+5.00100: (execute_action takeout_trash human loc2 loc2) [15.00000]
+10.00100: (execute_action stamp_diplomas robot loc1 loc1) [10.00000]
+20.00200: (execute_action attend_visitant human loc2 loc2) [15.00000]
+35.00200: (G)b (0.000 | 35.001)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)(G)
+
+; Makespan: 35.001999999999995
+; Metric: 55.003
+; States evaluated: 130
