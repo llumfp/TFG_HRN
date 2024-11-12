@@ -4,11 +4,11 @@
         "disfavour": ["cuter usado paquete"]
     },
     "2": {
-        "condition": "Se prefiere que el robot no atienda a los visitantes porque algunos de ellos desean contacto humano.",
+        "condition": "Se prefiere que el robot no atienda a los visitantes porque algunos de ellos desean contacto con personas.",
         "disfavour": ["visitante atendido loc4"]
     },
     "3": {
-        "condition": "El robot no puede recoger el paquete porque un humano debe firmarlo.",
+        "condition": "El robot no puede recoger el paquete porque una persona debe firmarlo.",
         "disfavour": ["paquete recogido loc2_entradaFME"]
     },
     "4": {

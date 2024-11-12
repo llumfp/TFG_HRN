@@ -2,6 +2,8 @@
     "1": {
         "goal": "Necesitamos enviar algunas cartas a la Generalitat.",
         "goal_code": "cartas enviadas generalitat",
+        "loc": "loc1",
+        "end_loc": "loc2_entradaFME",
         "subgoals_human": [
             {"task": "carta colocada sobre", "duration": 5},
             {"task": "sello puesto sobre", "duration": 5},
@@ -18,6 +20,8 @@
     "2": {
         "goal": "Sellar los diplomas de todos nuestros empleados.",
         "goal_code": "diplomas sellados loc1",
+        "loc": "loc1",
+        "end_loc": "loc1",
         "subgoals_human": [
             {"task": "diplomas sellados loc1", "duration": 15}
         ],
@@ -30,6 +34,8 @@
     "3": {
         "goal": "Recoger el paquete recibido.",
         "goal_code": "paquete recogido loc2_entradaFME",
+        "loc": "loc2_entradaFME",
+        "end_loc": "loc1",
         "subgoals_human": [
             {"task": "carrito recogido loc3", "duration": 5},
             {"task": "paquete recogido loc2_entradaFME", "duration": 10},
@@ -44,6 +50,8 @@
     "4": {
         "goal": "Atender al visitante.",
         "goal_code": "visitante atendido loc4",
+        "loc": "loc4",
+        "end_loc": "loc4",
         "subgoals_human": [
             {"task": "visitante atendido loc4", "duration": 15}
         ],
@@ -56,6 +64,8 @@
     "5": {
         "goal": "Llevar la caja de registros al almacen.",
         "goal_code": "caja_registros llevados almacen",
+        "loc": "loc5",
+        "end_loc": "loc5",
         "subgoals_human": [
             {"task": "registros colocados caja", "duration": 5},
             {"task": "caja llevada almacen", "duration": 10}
@@ -70,6 +80,8 @@
     "6": {
         "goal": "Sacar la basura.",
         "goal_code": "basura colocada contenedores",
+        "loc": "loc4",
+        "end_loc": "loc4",
         "subgoals_human": [
             {"task": "basura colocada contenedores", "duration": 15}
         ],
@@ -82,6 +94,8 @@
     "7": {
         "goal": "Desempaquetar el paquete recibido y organizar el material.",
         "goal_code": "paquete desempaquetado loc1",
+        "loc": "loc1",
+        "end_loc": "loc1",
         "subgoals_human": [
             {"task": "cuter usado paquete", "duration": 5},
             {"task": "material organizado loc1", "duration": 20}
@@ -97,6 +111,8 @@
     "8": {
         "goal": "Hacer llamadas pendientes.",
         "goal_code": "llamadas_pendientes realizadas loc5",
+        "loc": "loc1",
+        "end_loc": "loc5",
         "subgoals_human": [
             {"task": "llamadas_pendientes revisadas loc5", "duration": 3},
             {"task": "llamadas_pendientes realizadas loc5", "duration": 12}
@@ -104,13 +120,15 @@
         "total_duration_human": 15,
         "subgoals_robot": [
             {"task": "llamadas_pendientes revisadas loc5", "duration": 2},
-            {"task": "llamadas_pendientes realizadas loc5", "duration": 10}
+            {"task": "llamadas_pendientes realizadas loc5", "duration": 12}
         ],
-        "total_duration_robot": 12
+        "total_duration_robot": 14
     },
     "9": {
         "goal": "Limpiar el area comun.",
         "goal_code": "area_comun limpia loc1",
+        "loc": "loc1",
+        "end_loc": "loc1",
         "subgoals_human": [
             {"task": "muebles organizados loc1", "duration": 10},
             {"task": "ventanas limpiadas loc1", "duration": 8},
@@ -118,15 +136,17 @@
         ],
         "total_duration_human": 30,
         "subgoals_robot": [
-            {"task": "muebles organizados loc1", "duration": 9},
-            {"task": "ventanas limpiadas loc1", "duration": 7},
-            {"task": "superficies limpiadas loc1", "duration": 11}
+            {"task": "muebles organizados loc1", "duration": 10},
+            {"task": "ventanas limpiadas loc1", "duration": 8},
+            {"task": "superficies limpiadas loc1", "duration": 12}
         ],
-        "total_duration_robot": 27
+        "total_duration_robot": 30
     },
     "10": {
         "goal": "Escanear y digitalizar documentos.",
         "goal_code": "documentos escaneados loc3",
+        "loc": "loc3",
+        "end_loc": "loc3",
         "subgoals_human": [
             {"task": "documentos colocados escaner", "duration": 4},
             {"task": "archivos organizados_digitalmente loc3", "duration": 8}
@@ -141,6 +161,8 @@
     "11": {
         "goal": "Guiar a un visitante por el instituto.",
         "goal_code": "visitante guiado loc4-loc7",
+        "loc": "loc4",
+        "end_loc": "loc7",
         "subgoals_human": [
             {"task": "visitante informado loc4", "duration": 5},
             {"task": "visitante guiado loc4-loc7", "duration": 15}
@@ -155,6 +177,8 @@
     "12": {
         "goal": "Preparar una sala de reuniones.",
         "goal_code": "sala_reuniones preparada loc2",
+        "loc": "loc2",
+        "end_loc": "loc2",
         "subgoals_human": [
             {"task": "materiales recogidos loc2", "duration": 5},
             {"task": "sala organizada loc2", "duration": 8}
@@ -169,6 +193,8 @@
     "13": {
         "goal": "Acompañar a alguien al lugar de reparacion. Acompañar a alguien al contador de gas y luz.",
         "goal_code": "persona acompañada loc6",
+        "loc": "loc6",
+        "end_loc": "loc6",
         "subgoals_human": [
             {"task": "persona acompañada loc6", "duration": 10}
         ],
@@ -181,6 +207,8 @@
     "14": {
         "goal": "Gestionar inventario de suministros de oficina.",
         "goal_code": "inventario_suministros gestionado loc3",
+        "loc": "loc3",
+        "end_loc": "loc3",
         "subgoals_human": [
             {"task": "inventario revisado loc3", "duration": 12},
             {"task": "stock registrado loc3", "duration": 8}
@@ -195,6 +223,8 @@
     "15": {
         "goal": "Realizar mantenimiento periodico a los robots de recepcion.",
         "goal_code": "mantenimiento_robots realizado loc7",
+        "loc": "loc7",
+        "end_loc": "loc7",
         "subgoals_human": [
             {"task": "diagnostico manual loc7", "duration": 15},
             {"task": "ajustes menores loc7", "duration": 10}
@@ -205,87 +235,5 @@
             {"task": "reporte generado loc7", "duration": 5}
         ],
         "total_duration_robot": 13
-    },
-    "16": {
-        "goal": "Manejar la correspondencia interna.",
-        "goal_code": "correo_interno gestionado loc5",
-        "subgoals_human": [
-            {"task": "correo identificado loc5", "duration": 4},
-            {"task": "correo transportado escritorio", "duration": 5}
-        ],
-        "total_duration_human": 9,
-        "subgoals_robot": [
-            {"task": "correo identificado loc5", "duration": 3},
-            {"task": "correo transportado escritorio", "duration": 4}
-        ],
-        "total_duration_robot": 7
-    },
-    "17": {
-        "goal": "Cargar dispositivos electronicos.",
-        "goal_code": "dispositivos_electronicos cargados loc2",
-        "subgoals_human": [
-            {"task": "dispositivos conectados loc2", "duration": 3},
-            {"task": "estado_carga verificado loc2", "duration": 2}
-        ],
-        "total_duration_human": 5,
-        "subgoals_robot": [
-            {"task": "dispositivos conectados loc2", "duration": 2},
-            {"task": "estado_carga verificado loc2", "duration": 1}
-        ],
-        "total_duration_robot": 3
-    },
-    "18": {
-        "goal": "Suministrar materiales de oficina a las estaciones de trabajo.",
-        "goal_code": "materiales_oficina suministrados estacion_trabajo_loc1",
-        "subgoals_human": [
-            {"task": "materiales colocados estacion_trabajo_loc1", "duration": 7}
-        ],
-        "total_duration_human": 7,
-        "subgoals_robot": [
-            {"task": "materiales colocados estacion_trabajo_loc1", "duration": 5}
-        ],
-        "total_duration_robot": 5
-    },
-    "19": {
-        "goal": "Preparar kits de bienvenida para nuevos empleados o visitantes.",
-        "goal_code": "kits_personalizados preparados loc1",
-        "subgoals_human": [
-            {"task": "kits_personalizados ensamblados loc1", "duration": 10}
-        ],
-        "total_duration_human": 10,
-        "subgoals_robot": [
-            {"task": "kits_personalizados ensamblados loc1", "duration": 8}
-        ],
-        "total_duration_robot": 8
-    },
-    "20": {
-        "goal": "Recoger y reciclar dispositivos electronicos antiguos.",
-        "goal_code": "dispositivos_electronicos recogidos_reciclados loc1",
-        "subgoals_human": [
-            {"task": "dispositivos recogidos loc1", "duration": 8},
-            {"task": "dispositivos llevados punto_reciclaje_loc7", "duration": 12}
-        ],
-        "total_duration_human": 20,
-        "subgoals_robot": [
-            {"task": "dispositivos recogidos loc1", "duration": 6},
-            {"task": "transportados punto_reciclaje_loc7", "duration": 10}
-        ],
-        "total_duration_robot": 16
-    },
-    "21": {
-        "goal": "Cerrar las puertas asegurando que no hay nadie al final del dia.",
-        "goal_code": "oficina cerrada loc7ENTRADA",
-        "subgoals_human": [
-            {"task": "instalaciones revisadas loc?", "duration": 10},
-            {"task": "luces apagadas loc?", "duration": 5},
-            {"task": "puertas cerradas loc7ENTRADA", "duration": 2}
-        ],
-        "total_duration_human": 17,
-        "subgoals_robot": [
-            {"task": "instalaciones revisadas loc?", "duration": 8},
-            {"task": "luces apagadas loc?", "duration": 4},
-            {"task": "puertas cerradas loc7ENTRADA", "duration": 2}
-        ],
-        "total_duration_robot": 14
     }
 }
